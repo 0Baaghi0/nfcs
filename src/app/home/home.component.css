@@ -1,0 +1,33 @@
+.container{
+    background-color: #99D0FF;
+   display: flex;
+   margin: 0px;
+   max-width: 400%;
+   
+   /* margin-right: 10px; */
+
+
+}
+
+.un-container{
+    display: flex;
+    /* padding: 2%; */
+    /* margin-top: 2%; */
+    padding-top: 5%;
+   
+}
+li{
+    list-style-type: none;
+    margin-left: 40%;
+    color:  #67025F;
+
+    /* margin-bottom: 4%; */
+    /* margin-top: 6%; */
+    
+    
+}
+.bg{
+    background-color: #FFEAEA;
+    height: 85vh;
+    
+}
