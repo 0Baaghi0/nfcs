@@ -1,0 +1,39 @@
+.container{
+    background-image: url("../assets/nfcs backgroundimage.png");
+    height: 100vh;
+    background-size: cover;
+    
+    
+
+}
+
+.card-container{
+    background-image: url("../assets/Rectangle 536.png");
+    background-size: cover;
+    height: 75vh;
+    width: 75vh;
+    margin-left: 50%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+
+    
+ 
+   
+   
+    
+    
+    
+}
+input{
+    border-radius: 10px;
+}
+
+a{
+    margin: 3%;
+}
+
+.forgot{
+    display: flex;
+    justify-content: flex-end;
+}
