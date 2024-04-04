@@ -1,24 +1,14 @@
-
-<div class="container">
-    <img src="..\assets\Group877.png" alt="logo" style="margin-top:1%; margin-left:2%; width: 15%;">
-    <ul class="un-container">
-        <li>
-            Home
+<nav>
+    <ul>
+        <li><img src="../../assets/NORTHFACE.png" alt=""></li>
+        <!-- NFCS logo -->
+        <li><a style="margin-top: 30%;" href="http://localhost:4200/Home">Home</a></li>
+        <li class="has-submenu" (mouseenter)="showSubmenu($event)" (mouseleave)="hideSubmenu($event)">
+            <a style="margin-top: 20%;"href="#">Employee</a>
         </li>
-        <li>
-            Employee
-        </li>
-        <li>
-            Payroll
-        </li>
-        <li>
-            Leaves
-        </li>
-        <li>
-            WorkFlow
-        </li>
+        <li><a style="margin-top: 30%;" href="#">Payroll</a></li>
+        <li><a style="margin-top: 30%;" href="#">Leaves</a></li>
+        <li><a style="margin-top: 20%;" href="#">Workflow</a></li>
+        <li id="profile"><a href="#"><img src="../../assets/profile.png" alt="">View Profile</a></li>
     </ul>
-</div>
-<!-- <div class="bg" ></div> -->
-
-
+</nav>
