@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit {
       this.router.navigate(['/Home'])
     }
     else{
-      this.submitted=false;
+      this.submitted=true;
     //  console.log(this.login);
       console.log("incorrect user details")
     }
