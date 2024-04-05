@@ -3,15 +3,16 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
-  // router.navigate(['/Home'])
-hideSubmenu($event: MouseEvent) {
-throw new Error('Method not implemented.');
-}
-showSubmenu($event: MouseEvent) {
-throw new Error('Method not implemented.');
-}
+  isSubmenuVisible: boolean = false;
 
+  showSubmenu() {
+    this.isSubmenuVisible = true;
+  }
+
+  hideSubmenu() {
+    this.isSubmenuVisible = false;
+  }
 }
