@@ -1,0 +1,15 @@
+<h2 id="empheading">EMPLOYEE PROFILES</h2>
+
+<form (ngSubmit)="onSubmit()">
+    <label for="filter">Filter Employees:</label>
+    <input type="text" id="filter" [(ngModel)]="filterInput" name="filterInput">
+
+    <button type="submit">Apply Filter</button>
+    <button type="button" (click)="removeFilter()">Remove Filter</button>
+</form>
+
+<div *ngIf="!employeeExists">
+    <p>No employee found with the provided filter.</p>
+</div>
+
+<app-employee-list *ngIf="employeeExists" [employees]="employees"></app-employee-list>
