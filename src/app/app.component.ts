@@ -29,7 +29,8 @@ export class AppComponent implements OnInit {
         if (firstChild !== null && firstChild !== undefined) {
           const routeConfig = firstChild.snapshot.routeConfig;
           if (routeConfig !== null && routeConfig !== undefined) {
-            this.showNavbar = !(routeConfig?.path === '');
+            this.showNavbar = !(routeConfig?.path === '' ); 
+            // this.showNavbar = !(routeConfig?.path === '' || 'home');
           }
         }
       }
