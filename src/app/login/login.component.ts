@@ -37,7 +37,7 @@ export class LoginComponent implements OnInit {
     if(this.loginForm.value.userName==="Sowmya"&&this.loginForm.value.password==='123'){
       this.submitted=true
       console.log(this.submitted);
-      this.router.navigate(['/Home'])
+      this.router.navigate(['/landing'])
     }
     else{
       this.submitted=true;

@@ -1,50 +1,65 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
-export class AppComponent  implements OnInit{
+export class AppComponent implements OnInit {
   title = 'LoginFormofNFCS';
-  submitted=false;
-  loginForm:any=new FormGroup({})
-
-  constructor(private formbuilder:FormBuilder,private router:Router){
-  
-  }
-
-
+  submitted = false;
+  loginForm: any = new FormGroup({});
+  showNavbar: boolean = true; // Change this based on your condition
+  constructor(
+    private formbuilder: FormBuilder,
+    private router: Router,
+    private activatedRoute: ActivatedRoute
+  ) {}
+  // showNavbar: boolean = true; // Change this based on your condition
 
   ngOnInit(): void {
-    this.FormIntalization()
+    this.FormIntalization();
+    // this.updateNavbarVisibility();
+
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        const firstChild = this.activatedRoute.firstChild;
+        if (firstChild !== null && firstChild !== undefined) {
+          const routeConfig = firstChild.snapshot.routeConfig;
+          if (routeConfig !== null && routeConfig !== undefined) {
+            this.showNavbar = !(routeConfig?.path === '');
+          }
+        }
+      }
+    });
     
-  }
+    
+    
 
-  FormIntalization(){
-    this.loginForm=this.formbuilder.group({
-      userName:['',Validators.required],
-      password:['',Validators.required]
-    })
 
   }
+  FormIntalization() {
+    this.loginForm = this.formbuilder.group({
+      userName: ['', Validators.required],
+      password: ['', Validators.required],
+    });
+  }
 
-  login(){
+  login() {
     console.log(this.loginForm.value.userName);
-    if(this.loginForm.value.userName==="Mani"&&this.loginForm.value.password==='143'){
-      this.submitted=true
+    if (
+      this.loginForm.value.userName === 'Mani' &&
+      this.loginForm.value.password === '143'
+    ) {
+      this.submitted = true;
       console.log(this.submitted);
-      this.router.navigate(['/Home'])
-    }
-    else{
-      this.submitted=false;
-    //  console.log(this.login);
-      console.log("incorrect user details")
+      this.router.navigate(['/Home']);
+    } else {
+      this.submitted = false;
+      //  console.log(this.login);
+      console.log('incorrect user details');
     }
   }
-    }
-    
-  
-
+}
