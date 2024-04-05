@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit {
      
       this.submitted = true
       console.log(this.submitted);
-      this.router.navigate(['/home'])
+
     }
     else {
       this.submitted = false;

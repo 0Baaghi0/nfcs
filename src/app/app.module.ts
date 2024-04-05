@@ -12,6 +12,7 @@ import { HttpClientModule  } from '@angular/common/http';
 import { AddEmployeeComponent } from './add-employee/add-employee.component';
 import { ViewEmployeesComponent } from './view-employees/view-employees.component';
 import { EmployeeListComponent } from './employeelist/employeelist.component';
+import { LandingpageComponent } from './landingpage/landingpage.component';
 
 
 
@@ -22,7 +23,8 @@ import { EmployeeListComponent } from './employeelist/employeelist.component';
     HomeComponent,
     AddEmployeeComponent,
     ViewEmployeesComponent,
-    EmployeeListComponent
+    EmployeeListComponent,
+    LandingpageComponent
   ],
   imports: [
     BrowserModule,
