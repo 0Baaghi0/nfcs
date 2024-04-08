@@ -14,6 +14,9 @@ import { GenerateLettersComponent } from './generate-letters/generate-letters.co
 import { SetupComponent } from './setup/setup.component';
 import { AddNewEmployeeComponent } from './add-new-employee/add-new-employee.component';
 import { BulkAddEmployeeComponent } from './bulk-add-employee/bulk-add-employee.component';
+import { CommonModule } from '@angular/common';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { FgPsPgComponent } from './fg-ps-pg/fg-ps-pg.component';
 
 
 
@@ -29,12 +32,16 @@ import { BulkAddEmployeeComponent } from './bulk-add-employee/bulk-add-employee.
     GenerateLettersComponent,
     SetupComponent,
     AddNewEmployeeComponent,
-    BulkAddEmployeeComponent
+    BulkAddEmployeeComponent,
+    ForgotPasswordComponent,
+    FgPsPgComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    CommonModule,
+
     HttpClientModule,
     FormsModule
   ],

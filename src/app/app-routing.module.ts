@@ -9,9 +9,12 @@ import { GenerateLettersComponent } from './generate-letters/generate-letters.co
 import { SetupComponent } from './setup/setup.component';
 import { AddNewEmployeeComponent } from './add-new-employee/add-new-employee.component';
 import { BulkAddEmployeeComponent } from './bulk-add-employee/bulk-add-employee.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { FgPsPgComponent } from './fg-ps-pg/fg-ps-pg.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent},
+  { path: 'forgotPassword', component:ForgotPasswordComponent},
   { path: 'home', component: HomeComponent },
   { path: 'addEmployee', component: AddEmployeeComponent },
   { path: 'viewEmployees', component: ViewEmployeesComponent },
@@ -20,6 +23,7 @@ const routes: Routes = [
   { path: 'landing', component:LandingpageComponent},
   { path: 'addNewEmployeePage', component:AddNewEmployeeComponent},
   { path: 'bulkAddEmployee', component:BulkAddEmployeeComponent},
+  { path: 'forgetPage', component:FgPsPgComponent},
 
 ];
 
