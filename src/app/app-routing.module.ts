@@ -5,13 +5,16 @@ import { HomeComponent } from './home/home.component';
 import { AddEmployeeComponent } from './add-employee/add-employee.component';
 import { ViewEmployeesComponent } from './view-employees/view-employees.component';
 import { LandingpageComponent } from './landingpage/landingpage.component';
+import { GenerateLettersComponent } from './generate-letters/generate-letters.component';
+import { SetupComponent } from './setup/setup.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent},
   { path: 'home', component: HomeComponent },
   { path: 'addEmployee', component: AddEmployeeComponent },
   { path: 'viewEmployees', component: ViewEmployeesComponent },
-  { path: 'addEmployees', component: AddEmployeeComponent},
+  { path: 'generateLetters', component: GenerateLettersComponent },
+  { path: 'setup', component: SetupComponent },
   { path: 'landing', component:LandingpageComponent}
 ];
 
