@@ -3,14 +3,14 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 
-interface Employee {
-  employeeNumber: number;
-  firstName: string;
-  lastName: string;
-  dateOfJoining: Date;
-  location: string;
-  email: string;
-}
+// interface Employee {
+//   employeeNumber: number;
+//   firstName: string;
+//   lastName: string;
+//   dateOfJoining: Date;
+//   location: string;
+//   email: string;
+// }
 
 @Component({
   selector: 'app-add-employee',
