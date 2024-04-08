@@ -15,6 +15,8 @@ import { EmployeeListComponent } from './employeelist/employeelist.component';
 import { LandingpageComponent } from './landingpage/landingpage.component';
 import { GenerateLettersComponent } from './generate-letters/generate-letters.component';
 import { SetupComponent } from './setup/setup.component';
+import { AddNewEmployeeComponent } from './add-new-employee/add-new-employee.component';
+import { BulkAddEmployeeComponent } from './bulk-add-employee/bulk-add-employee.component';
 
 
 
@@ -28,7 +30,9 @@ import { SetupComponent } from './setup/setup.component';
     EmployeeListComponent,
     LandingpageComponent,
     GenerateLettersComponent,
-    SetupComponent
+    SetupComponent,
+    AddNewEmployeeComponent,
+    BulkAddEmployeeComponent
   ],
   imports: [
     BrowserModule,
