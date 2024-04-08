@@ -1,21 +1,21 @@
 <nav>
     <ul>
-        <li><img src="../../assets/NORTHFACE.png" alt=""></li>
-        <!-- NFCS logo -->
-        <li><a style="margin-top: 30%;" href="landing">Home</a></li>
-        <li class="has-submenu" (mouseenter)="showSubmenu()" (mouseleave)="hideSubmenu()">
-            <a style="margin-top: 20%;" href="landing">Employee</a>
-            <ul class="submenu" *ngIf="isSubmenuVisible">
-                <li><a href="addEmployee">Add Employee</a></li>
-                <li><a href="viewEmployees">Employee Profile</a></li>
-                <li><a href="viewEmployees">Generate Letters</a></li>
-                <li><a href="viewEmployees">Setup</a></li>
+        <li id="ch1">
+            <img src="../../assets/NORTHFACE.png" alt="NFCS logo">
+        </li>
+        <li><a href="landing">Home</a></li>
+        <li class="has-submenu">
+            <a href="landing">Employee</a>
+            <ul class="submenu">
+                <li><a href="addEmployee">Add</a></li>
+                <li><a href="viewEmployees">View</a></li>
+                <li><a href="generateLetters">Generate</a></li>
+                <li><a href="setup">Setup</a></li>
             </ul>
         </li>
-        <li><a style="margin-top: 30%;" href="#">Payroll</a></li>
-        <li><a style="margin-top: 30%;" href="#">Leaves</a></li>
-        <li><a style="margin-top: 20%;" href="#">Workflow</a></li>
+        <li><a href="#">Payroll</a></li>
+        <li><a href="#">Leaves</a></li>
+        <li><a href="#">Workflow</a></li>
         <li id="profile"><a href="#"><img src="../../assets/profile.png" alt="">View Profile</a></li>
     </ul>
-
-
+</nav>
