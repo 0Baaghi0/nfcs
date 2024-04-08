@@ -22,7 +22,7 @@ const routes: Routes = [
   { path: 'setup', component: SetupComponent },
   { path: 'landing', component:LandingpageComponent},
   { path: 'addNewEmployeePage', component:AddNewEmployeeComponent},
-  { path: 'bulkAddEmployee', component:BulkAddEmployeeComponent},
+  { path: 'bulkAddEmployee', component:BulkAddEmployeeComponent}, 
   { path: 'forgetPage', component:FgPsPgComponent},
 
 ];

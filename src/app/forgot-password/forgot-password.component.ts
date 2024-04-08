@@ -12,12 +12,12 @@ import { ReactiveFormsModule } from '@angular/forms';
 })
 
 export class ForgotPasswordComponent implements OnInit {
+  
   ForgotPassword!: FormGroup;
-  firstForm: any;
-  FormBuilder: any;
+  FormBuilder:any;
   // ForgotPassword:any =new FormGroup({});
   constructor(private formbuilder: FormBuilder, private router: Router) {
-    this.firstForm = this.FormBuilder.group({
+    this.ForgotPassword = this.FormBuilder.group({
 
     });
   }
@@ -37,5 +37,5 @@ SaveNewPassword(){
   this.router.navigate(['/forgotPassword'])
 
 }
- 
-export class ForgotPasswordComponent  {}
+
+}
