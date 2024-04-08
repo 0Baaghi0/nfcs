@@ -7,6 +7,8 @@ import { ViewEmployeesComponent } from './view-employees/view-employees.componen
 import { LandingpageComponent } from './landingpage/landingpage.component';
 import { GenerateLettersComponent } from './generate-letters/generate-letters.component';
 import { SetupComponent } from './setup/setup.component';
+import { AddNewEmployeeComponent } from './add-new-employee/add-new-employee.component';
+import { BulkAddEmployeeComponent } from './bulk-add-employee/bulk-add-employee.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent},
@@ -15,7 +17,10 @@ const routes: Routes = [
   { path: 'viewEmployees', component: ViewEmployeesComponent },
   { path: 'generateLetters', component: GenerateLettersComponent },
   { path: 'setup', component: SetupComponent },
-  { path: 'landing', component:LandingpageComponent}
+  { path: 'landing', component:LandingpageComponent},
+  { path: 'addNewEmployeePage', component:AddNewEmployeeComponent},
+  { path: 'bulkAddEmployee', component:BulkAddEmployeeComponent},
+
 ];
 
 
