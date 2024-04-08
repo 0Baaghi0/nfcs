@@ -4,9 +4,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
-import { FormsModule } from '@angular/forms';
 
+
+import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule  } from '@angular/common/http';
 import { AddEmployeeComponent } from './add-employee/add-employee.component';
@@ -17,6 +19,9 @@ import { GenerateLettersComponent } from './generate-letters/generate-letters.co
 import { SetupComponent } from './setup/setup.component';
 import { AddNewEmployeeComponent } from './add-new-employee/add-new-employee.component';
 import { BulkAddEmployeeComponent } from './bulk-add-employee/bulk-add-employee.component';
+import { CommonModule } from '@angular/common';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { FgPsPgComponent } from './fg-ps-pg/fg-ps-pg.component';
 
 
 
@@ -32,13 +37,18 @@ import { BulkAddEmployeeComponent } from './bulk-add-employee/bulk-add-employee.
     GenerateLettersComponent,
     SetupComponent,
     AddNewEmployeeComponent,
-    BulkAddEmployeeComponent
+    BulkAddEmployeeComponent,
+    ForgotPasswordComponent,
+    FgPsPgComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule,FormsModule
+    CommonModule,
+  
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
