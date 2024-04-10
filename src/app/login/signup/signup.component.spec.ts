@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FgPsPgComponent } from './fg-ps-pg.component';
+import { SignupComponent } from './signup.component';
 
-describe('FgPsPgComponent', () => {
-  let component: FgPsPgComponent;
-  let fixture: ComponentFixture<FgPsPgComponent>;
+describe('SignupComponent', () => {
+  let component: SignupComponent;
+  let fixture: ComponentFixture<SignupComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [FgPsPgComponent]
+      declarations: [SignupComponent]
     });
-    fixture = TestBed.createComponent(FgPsPgComponent);
+    fixture = TestBed.createComponent(SignupComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

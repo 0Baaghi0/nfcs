@@ -10,23 +10,29 @@ import { SetupComponent } from './setup/setup.component';
 import { AddNewEmployeeComponent } from './add-new-employee/add-new-employee.component';
 import { BulkAddEmployeeComponent } from './bulk-add-employee/bulk-add-employee.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
-import { FgPsPgComponent } from './fg-ps-pg/fg-ps-pg.component';
+// import { FgPsPgComponent } from './fg-ps-pg/fg-ps-pg.component';
+import { SignupComponent } from './login/signup/signup.component';
+import { OtpComponent } from './otp/otp.component';
+import { ResetSuccessfulComponent } from './otp/reset-successful/reset-successful.component';
+import { ResetComponent } from './otp/reset/reset.component';
 
 const routes: Routes = [
-  { path: '', component: LoginComponent},
-  { path: 'forgotPassword', component:ForgotPasswordComponent},
+  { path: '', component: LoginComponent },
+  { path: 'forgotPassword', component: ForgotPasswordComponent },
   { path: 'home', component: HomeComponent },
   { path: 'addEmployee', component: AddEmployeeComponent },
   { path: 'viewEmployees', component: ViewEmployeesComponent },
   { path: 'generateLetters', component: GenerateLettersComponent },
   { path: 'setup', component: SetupComponent },
-  { path: 'landing', component:LandingpageComponent},
-  { path: 'addNewEmployeePage', component:AddNewEmployeeComponent},
-  { path: 'bulkAddEmployee', component:BulkAddEmployeeComponent}, 
-  { path: 'forgetPage', component:FgPsPgComponent},
-
+  { path: 'landing', component: LandingpageComponent },
+  { path: 'addNewEmployeePage', component: AddNewEmployeeComponent },
+  { path: 'bulkAddEmployee', component: BulkAddEmployeeComponent },
+  // { path: 'forgetPage', component:FgPsPgComponent},
+  { path: 'signUp', component: SignupComponent },
+  { path: 'OTPPage', component: OtpComponent },
+  { path: 'NPUSucess', component: ResetSuccessfulComponent },
+  { path:'reset', component:ResetComponent}
 ];
-
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

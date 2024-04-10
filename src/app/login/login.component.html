@@ -7,18 +7,18 @@
             <div class="col col-md-2"></div>
             <div class="col col-md-4 col-sm-8">
                 <!-- <img src="../assets/Rectangle 536.png" alt="box" style="margin-left: 15%; margin-top:5%; height: 80vh;"> -->
-                <div class="card-container shadow-lg bg-light rounded py-5" >
+                <div class="card-container shadow-lg bg-light rounded py-5">
                     <h1 style="text-align: center; margin:2%; color: #0458A0; font-style: italic;">LOGIN</h1>
                     <form [formGroup]="loginForm" (ngSubmit)="login()">
                         <div class="d-flex flex-column">
                             <label for="" class="m-2"></label>
                             <input type="text" placeholder="User Name" formControlName="userName" class="w-70 m-2 p-2">
                             <div *ngIf="loginForm.get('userName')?.touched && loginForm.get('userName')?.hasError('required')"
-                                class="text-danger ms-3"  >
+                                class="text-danger ms-3">
                                 Username is required
                             </div>
- 
- 
+
+
                         </div>
                         <div class="d-flex flex-column">
                             <label for="" class="m-2"></label>
@@ -30,21 +30,23 @@
                             </div>
                             <div *ngIf="submitted" class="text-danger ms-3">Incorrect Username&&Password!!!</div>
                             <div class="forgot mb-4">
- 
- 
+
+
                                 <div class="SignIn ms-3">
-                                    <a href="" ></a>
+                                    
+                                    <a routerLink="/signUp"></a>
+
                                 </div>
                                 <div class="me-4">
-                                    <a href="forgetPage">ForgotPassword?</a>
+                                    <a routerLink="/forgotPassword">ForgotPassword?</a>
                                 </div>
                             </div>
- 
- 
+
+
                         </div>
- 
- 
- 
+
+
+
                         <div style="text-align: center;">
                             <button class="btn btn-primary" style="width: 80%;" type="submit">LOGIN</button>
                         </div>
@@ -52,6 +54,6 @@
                 </div>
             </div>
         </div>
- 
+
     </div>
 </div>

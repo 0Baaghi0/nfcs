@@ -17,7 +17,7 @@ import { AddNewEmployeeComponent } from './add-new-employee/add-new-employee.com
 import { BulkAddEmployeeComponent } from './bulk-add-employee/bulk-add-employee.component';
 import { CommonModule } from '@angular/common';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
-import { FgPsPgComponent } from './fg-ps-pg/fg-ps-pg.component';
+// import { FgPsPgComponent } from './fg-ps-pg/fg-ps-pg.component';
 import { FileUploadModule } from 'ng2-file-upload';
 import { EmployeeCardDisplayComponent } from './view-employees/employee-card-display/employee-card-display.component';
 import { EmployeeFilterComponent } from './view-employees/employee-filter/employee-filter.component';
@@ -25,6 +25,10 @@ import { EmployeeListDisplayComponent } from './landingpage/employee-list-displa
 
 
 import { GetEmployeesService } from '../app/services/get-employees.service';
+import { SignupComponent } from './login/signup/signup.component';
+import { OtpComponent } from './otp/otp.component';
+import { ResetComponent } from './otp/reset/reset.component';
+import { ResetSuccessfulComponent } from './otp/reset-successful/reset-successful.component';
 
 
 @NgModule({
@@ -40,10 +44,13 @@ import { GetEmployeesService } from '../app/services/get-employees.service';
     AddNewEmployeeComponent,
     BulkAddEmployeeComponent,
     ForgotPasswordComponent,
-    FgPsPgComponent,
     EmployeeCardDisplayComponent,
     EmployeeFilterComponent,
     EmployeeListDisplayComponent,
+    SignupComponent,
+    OtpComponent,
+    ResetComponent,
+    ResetSuccessfulComponent,
   ],
   imports: [
     BrowserModule,
