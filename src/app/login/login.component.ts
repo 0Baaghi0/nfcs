@@ -33,9 +33,9 @@ export class LoginComponent implements OnInit {
     ) {
       this.submitted = true;
       console.log(this.submitted);
-      this.router.navigate(['/landing']);
+      this.router.navigate(['landing']);
     } else {
-      this.submitted = false;
+      this.submitted = true;
       //  console.log(this.login);
       console.log('incorrect user details');
     }
