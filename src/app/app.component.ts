@@ -51,8 +51,8 @@ export class AppComponent implements OnInit {
   login() {
     console.log(this.loginForm.value.userName);
     if (
-      this.loginForm.value.userName === 'Mani' &&
-      this.loginForm.value.password === '143'
+      this.loginForm.value.userName === 'Sowmya' &&
+      this.loginForm.value.password === '123'
     ) {
       this.submitted = true;
       console.log(this.submitted);
@@ -60,7 +60,7 @@ export class AppComponent implements OnInit {
     } else {
       this.submitted = false;
       //  console.log(this.login);
-      console.log('incorrect user details');
+      console.log('Incorrect user details');
     }
   }
 }
