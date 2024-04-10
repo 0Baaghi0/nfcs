@@ -13,14 +13,14 @@
 
 #applyFilter{
     position: absolute;
-    top: 30.1vh;
+    top: 30.3vh;
     left: 66vw;
     border-radius: 10px;
     
 }
 #removeFilter{
     position: absolute;
-    top: 30.1vh;
+    top: 30.3vh;
     left: 70vw;
     border-radius: 10px;
 }
