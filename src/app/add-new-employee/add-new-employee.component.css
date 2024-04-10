@@ -1,12 +1,19 @@
 .main {
   background-color: #ffeaea;
+  height: 85vh;
 }
 
 .text-heading {
+  font-weight: bold;
+  padding-top: 3vh;
+  padding-left: 20vh;
+  padding-bottom: 3vh;
+  
 }
 
 .bulk-add {
+  margin-bottom: 6vh;
 }
-
+/* 
 .single-add {
-}
+} */

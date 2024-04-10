@@ -1,0 +1,21 @@
+
+
+
+<div class="main">
+    <div *ngIf="employees.length === 0; else employeeList">
+      <p>No employees found.</p>
+    </div>
+    
+    <ng-template #employeeList>
+      <div class="employee-card" *ngFor="let employee of employees">
+        <div class="employee-details">
+          <p>Employee ID: {{ employee.EMPLOYEE_NUMBER }}</p>
+          <p>First Name: {{ employee.FIRST_NAME }}</p>
+          <p>Last Name: {{ employee.LAST_NAME }}</p>
+          <p>Date of Joining: {{ employee.DATE_OF_JOINING }}</p>
+          <p>Location: {{ employee.LOCATION }}</p>
+          <p>Email: {{ employee.EMAIL }}</p>
+        </div>
+      </div>
+    </ng-template>
+  </div>

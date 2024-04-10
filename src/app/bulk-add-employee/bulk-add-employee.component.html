@@ -1,1 +1,12 @@
-<p>bulk-add-employee works!</p>
+<div class="main">
+    <p>Add an employee or bunch of employees by clicking on the Bulk Upload button</p>
+
+    <input (change)="selectFile($event)" type="file" name="excelFile" id="excelFile">
+    <!-- <button class="btn" mat-raised-button color="primary">Upload Bulk Data</button> -->
+
+    <button (click)="uploadFile()">Upload Bulk Data</button>
+
+    <div class="bulk-add-image">
+        <img src="../../assets/bulkAdd.png" alt="bulkAddImage">
+    </div>
+</div>

@@ -1,0 +1,36 @@
+.main{
+    height: 22vh;
+    background-color: white;
+    width: 85vw;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 1.5vw;
+
+}
+p{
+    margin-top: 3vh;
+    margin-left: 6vw;
+}
+#excelFile{
+    margin-left: 20vw;
+}
+button {
+    margin-left: 0vw;
+    background-color: #0c5688;
+    color: white;
+    border-radius: 5px;
+    padding: 3px 25px;
+    border: none;
+  }
+
+img{
+    height: 20vh;
+    width: 17vw;
+}
+.bulk-add-image{
+    
+    position: absolute;
+    top: 26vh;
+    left: 68vw;
+}
+

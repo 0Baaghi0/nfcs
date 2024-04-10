@@ -1,49 +1,66 @@
 .main {
-    height: 30vh;
-    width: 85vw;
-    margin: 0 auto;
-    overflow: hidden;
-    border-radius: 1.5vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* align-items: center; */
+  height: auto; /* Adjust height as needed */
+  width: 85vw;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 1.5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 6vh;
 }
 
-.form-heading{
-    background-color: #99d0ff;
-    height: 5vh ;
-    padding-left: 4vw;;
-    text-align: left;
-    font-weight: bold;
+.form-heading {
+  display: flex;
+  align-items: center;
+  background-color: #99d0ff;
+  height: 8vh;
+  padding-left: 4vw;
+  text-align: left;
+  font-weight: bold;
 }
 
-.form-body{
-    background-color:white;
-    height: 25vh ;
-    text-align: left;
+.form-body {
+  background-color: white;
+  text-align: left;
+  padding: 2vh 0;
 }
+
 .form-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, auto);
-    gap: 0vh; /* Adjust the gap between grid items as needed */
-    place-items: center; /* Center items within their grid cells */
-  }
-  
-  .form-row {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 0vh; /* Adjust the spacing between rows as needed */
-  }
-  
-  .form-row label {
-    text-align: left;
-    margin-top: 0vh;
-    margin-bottom: 1vh; /* Adjust the spacing between label and input as needed */
-  }
-  
-  .form-row input {
-    width: 100%; /* Make the input fields fill the entire column */
-  }
-  
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 0vh; /* Adjust the gap between grid items as needed */
+  place-items: center; /* Center items within their grid cells */
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2vh; /* Adjust the spacing between rows as needed */
+}
+
+.form-row label {
+  text-align: left;
+  margin-top: 0vh;
+  margin-bottom: 1vh; /* Adjust the spacing between label and input as needed */
+}
+
+.form-row input {
+  width: 100%;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: flex-end; /* Align buttons to the right */
+  grid-column: 3; /* Place buttons in the third column */
+}
+
+button {
+  background-color: #0c5688;
+  color: white;
+  border-radius: 5px;
+  padding: 3px 25px;
+  border: none;
+  margin-left: 5px; /* Adjust margin between buttons */
+}

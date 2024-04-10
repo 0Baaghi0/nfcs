@@ -1,0 +1,16 @@
+.employee-card {
+    display: inline-block;
+    background-color: #e0e0e0;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin: 1rem;
+  }
+  
+  .employee-details {
+    text-align: center;
+  }
+  
+  .main {
+    background-color: #ffeaea;
+  }
+  
