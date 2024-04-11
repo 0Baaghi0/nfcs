@@ -4,3 +4,12 @@
         <app-employee-card-display [employees]="employees" [employeeCount]="employeeCount" />
     </div>
 </div>
+
+<div *ngIf="!employeeExistsChange" id="errorContainer">
+    <div class="icon">
+        <span class="material-symbols-outlined">
+            disabled_by_default
+        </span>
+    </div>
+    <p>No employee found !!</p>
+</div>

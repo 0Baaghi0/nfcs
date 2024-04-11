@@ -11,7 +11,7 @@ export class ViewEmployeesComponent implements OnInit {
   employeeCount: number = 0;
   employees: Employee[] = [];
   filterInput: string = '';
-
+  employeeExistsChange: boolean = false;
   constructor(private getemployeeService: GetEmployeesService) {}
 
   ngOnInit() {
@@ -23,6 +23,7 @@ export class ViewEmployeesComponent implements OnInit {
       (data: Employee[]) => {
         this.employees = data;
         this.employeeCount = this.employees.length;
+        this.employeeExistsChange = this.employeeCount > 0;
       },
       (error) => {
         console.error('Error fetching employee details:', error);
@@ -37,13 +38,15 @@ export class ViewEmployeesComponent implements OnInit {
         this.employeeCount = this.employees.length;
       },
       (error) => {
+        alert("Empty");
+        this.employeeExistsChange = this.employeeCount > 0;
         console.error('Error filtering employees:', error);
       }
     );
   }
 
   removeFilter() {
-    this.filterInput = ''; // Clear filter input
-    this.fetchEmployees(); // Fetch all employees again
+    this.filterInput = '';
+    this.fetchEmployees();
   }
 }

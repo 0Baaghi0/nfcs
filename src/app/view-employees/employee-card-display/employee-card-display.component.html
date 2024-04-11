@@ -1,8 +1,11 @@
 <div class="main">
   <div class="card-container">
-    <p id="idCount">{{ employeeCount }} EMPLOYEES</p>
+    <span id="idCount">{{ employeeCount }} </span>
+    <span style="font-size: larger;font-weight: bolder;"> EMPLOYEES</span>
+
+
     <div *ngIf="employees.length === 0; else employeeList">
-      <!-- <p>No employees found.</p> -->
+      <p>No employees found.</p>
     </div>
 
     <ng-template #employeeList>
@@ -10,14 +13,21 @@
         <div class="employee-card" *ngFor="let employee of employees">
           <div class="employee-details">
             <div class="employee-details1">
-              <div class="img-div"></div>
-              <p>Employee ID: {{ employee.EMPLOYEE_NUMBER }}</p>
-              <p>Name: {{ employee.FIRST_NAME }} {{ employee.LAST_NAME }}</p>
+              <div class="img-div"></div> <br>
+              <p>Employee ID: {{ employee.EMPLOYEE_NUMBER }} <br>
+                Name: {{ employee.FIRST_NAME }} {{ employee.LAST_NAME }}
             </div>
             <div class="employee-details2">
-              Date of Joining: {{ employee.DATE_OF_JOINING | date: 'shortDate'}}
-              <br>Location: {{ employee.LOCATION }}
-              <br>Email: {{ employee.EMAIL }}
+              <p><br><span class="material-symbols-outlined">
+                  calendar_month
+                </span>{{ employee.DATE_OF_JOINING | date: 'shortDate'}}
+                <br><span class="material-symbols-outlined">
+                  home_pin
+                </span>{{ employee.LOCATION }}
+                <br><span class="material-symbols-outlined">
+                  mail
+                </span>{{ employee.EMAIL }}
+              </p>
             </div>
           </div>
         </div>
