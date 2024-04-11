@@ -1,7 +1,5 @@
 import { Component, Input } from '@angular/core';
-
 import { Employee } from '../../employee';
-
 
 @Component({
   selector: 'app-employee-card-display',
@@ -10,5 +8,5 @@ import { Employee } from '../../employee';
 })
 export class EmployeeCardDisplayComponent {
   @Input() employees: Employee[] = [];
-employeeExists: any;
+  @Input() employeeCount: number = 0;
 }

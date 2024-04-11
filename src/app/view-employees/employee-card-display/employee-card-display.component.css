@@ -1,16 +1,61 @@
+
+/* red:#f21111
+
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+*/
+.main {
+  background-color: #ffeaea;
+  height: 100%;
+}
+#idCount {
+  font-size: larger;
+  font-weight: bolder;
+}
+.card-container {
+  margin: 2vh 4vw; /* Gap from left and right of screen */
+  /* margin-bottom: 100vh; */
+  background-color: white; /* White background for the container */
+  padding: 30px; /* Add padding for better spacing */
+  border-radius: 10px; /* Rounded corners for the container */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Box shadow for a subtle effect */
+}
+
+.employee-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.img-div {
+  margin-top: 2vh;
+  height: 30vh;
+  width: 15vw;  
+  border-radius: 50%;
+  background-color: white;
+}
 .employee-card {
-    display: inline-block;
-    background-color: #e0e0e0;
-    border: 1px solid #ccc;
-    padding: 1rem;
-    margin: 1rem;
-  }
-  
-  .employee-details {
-    text-align: center;
-  }
-  
-  .main {
-    background-color: #ffeaea;
-  }
-  
+  width: calc(
+    25% - 20px
+  ); /* 25% of the container width with margin between cards */
+  margin-bottom: 20px; /* Margin between cards */
+  border-radius: 5px; /* Rounded corners for cards */
+  /* padding: 1px; */
+  box-sizing: border-box;
+}
+
+/* Additional styling for employee details */
+.employee-details1,
+.employee-details2 {
+  font-size: small;
+  height: 30vh;
+  display: flex;
+  background-color: #99d0ff;
+  color: black;
+  flex-direction: column;
+  /* justify-content: center;  */
+  align-items: center;
+}
+.employee-details2 {
+  background-color: #c5f4fe;
+  height: 15vh;
+
+}

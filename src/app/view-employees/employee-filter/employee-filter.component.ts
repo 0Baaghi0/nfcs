@@ -1,16 +1,7 @@
+import { Component, EventEmitter, Output } from '@angular/core';
+import { GetEmployeesService } from '../../services/get-employees.service';
+import { Employee } from '../../employee';
 
-import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-
-
-interface Employee {
-  EMPLOYEE_NUMBER: number;
-  FIRST_NAME: string;
-  LAST_NAME: string;
-  DATE_OF_JOINING: Date;
-  LOCATION: string;
-  EMAIL: string;
-}
 
 @Component({
   selector: 'app-employee-filter',
@@ -18,27 +9,21 @@ interface Employee {
   styleUrls: ['./employee-filter.component.css']
 })
 export class EmployeeFilterComponent {
-
-
-  filterInput: string = ''; // Variable to store user input for filtering
+  @Output() filterApplied: EventEmitter<string> = new EventEmitter<string>();
+  @Output() filterRemoved: EventEmitter<void> = new EventEmitter<void>(); // New event emitter for removing filter
+  filterInput: string = '';
   employeeExists: boolean = false;
-  employees: Employee[] = [];
-  private baseUrl = 'http://127.0.0.1:5000/getemployee';
-  baseUrlInitial = 'http://127.0.0.1:5000/getemployee/filterEmployees';
-  constructor(private http: HttpClient) {}
+
+  constructor(private employeeService: GetEmployeesService) {}
 
   ngOnInit() {
     this.fetchEmployees();
-    console.log(this.baseUrlInitial);
   }
 
   fetchEmployees() {
-    const url = this.baseUrl;
-
-    this.http.get<Employee[]>(url).subscribe(
+    this.employeeService.fetchEmployees().subscribe(
       (data: Employee[]) => {
-        this.employees = data;
-        this.employeeExists = this.employees.length > 0;
+        this.employeeExists = data.length > 0;
       },
       (error) => {
         console.error('Error fetching employee details:', error);
@@ -46,32 +31,17 @@ export class EmployeeFilterComponent {
       }
     );
   }
-  removeFilter() {
-    this.filterInput = '';
-    this.employeeExists = true;
-    this.employees = [];
-    this.fetchEmployees();
-  }
+
   onSubmit() {
     if (!this.filterInput.trim()) {
       alert('Please enter a value');
       return;
     }
+    this.filterApplied.emit(this.filterInput.trim());
+  }
 
-    const url = `${this.baseUrlInitial}/${this.filterInput.trim()}`;
-
-    console.log('Final URL:', url);
-
-    this.http.get<Employee[]>(url).subscribe(
-      (data: Employee[]) => {
-        this.employees = data;
-        console.log(this.employees);
-        this.employeeExists = this.employees.length > 0;
-      },
-      (error) => {
-        console.error('Error fetching employee details:', error);
-        this.employeeExists = false;
-      }
-    );
+  removeFilter() {
+    this.filterInput = '';
+    this.filterRemoved.emit(); // Emit event to notify parent to remove filter
   }
 }

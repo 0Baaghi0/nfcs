@@ -1,5 +1,3 @@
-// view-employees.component.ts
-
 import { Component, OnInit } from '@angular/core';
 import { Employee } from '../employee';
 import { GetEmployeesService } from '../services/get-employees.service';
@@ -10,12 +8,11 @@ import { GetEmployeesService } from '../services/get-employees.service';
   styleUrls: ['./view-employees.component.css'],
 })
 export class ViewEmployeesComponent implements OnInit {
-  filterInput: string = '';
-  employeeExists: boolean = false;
+  employeeCount: number = 0;
   employees: Employee[] = [];
+  filterInput: string = '';
 
-
-  constructor(public getemployeeService: GetEmployeesService) {}
+  constructor(private getemployeeService: GetEmployeesService) {}
 
   ngOnInit() {
     this.fetchEmployees();
@@ -25,37 +22,28 @@ export class ViewEmployeesComponent implements OnInit {
     this.getemployeeService.fetchEmployees().subscribe(
       (data: Employee[]) => {
         this.employees = data;
-        this.employeeExists = this.employees.length > 0;
+        this.employeeCount = this.employees.length;
       },
       (error) => {
         console.error('Error fetching employee details:', error);
-        this.employeeExists = false;
+      }
+    );
+  }
+
+  applyFilter(filterInput: string) {
+    this.getemployeeService.filterEmployees(filterInput).subscribe(
+      (data: Employee[]) => {
+        this.employees = data;
+        this.employeeCount = this.employees.length;
+      },
+      (error) => {
+        console.error('Error filtering employees:', error);
       }
     );
   }
 
   removeFilter() {
-    this.filterInput = '';
-    this.employeeExists = true;
-    this.employees = [];
-    this.fetchEmployees();
-  }
-
-  onSubmit() {
-    if (!this.filterInput.trim()) {
-      alert('Please enter a value');
-      return;
-    }
-
-    this.getemployeeService.filterEmployees(this.filterInput).subscribe(
-      (data: Employee[]) => {
-        this.employees = data;
-        this.employeeExists = this.employees.length > 0;
-      },
-      (error) => {
-        console.error('Error fetching employee details:', error);
-        this.employeeExists = false;
-      }
-    );
+    this.filterInput = ''; // Clear filter input
+    this.fetchEmployees(); // Fetch all employees again
   }
 }

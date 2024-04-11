@@ -1,21 +1,27 @@
-
-
-
 <div class="main">
+  <div class="card-container">
+    <p id="idCount">{{ employeeCount }} EMPLOYEES</p>
     <div *ngIf="employees.length === 0; else employeeList">
-      <p>No employees found.</p>
+      <!-- <p>No employees found.</p> -->
     </div>
-    
+
     <ng-template #employeeList>
-      <div class="employee-card" *ngFor="let employee of employees">
-        <div class="employee-details">
-          <p>Employee ID: {{ employee.EMPLOYEE_NUMBER }}</p>
-          <p>First Name: {{ employee.FIRST_NAME }}</p>
-          <p>Last Name: {{ employee.LAST_NAME }}</p>
-          <p>Date of Joining: {{ employee.DATE_OF_JOINING }}</p>
-          <p>Location: {{ employee.LOCATION }}</p>
-          <p>Email: {{ employee.EMAIL }}</p>
+      <div class="employee-container">
+        <div class="employee-card" *ngFor="let employee of employees">
+          <div class="employee-details">
+            <div class="employee-details1">
+              <div class="img-div"></div>
+              <p>Employee ID: {{ employee.EMPLOYEE_NUMBER }}</p>
+              <p>Name: {{ employee.FIRST_NAME }} {{ employee.LAST_NAME }}</p>
+            </div>
+            <div class="employee-details2">
+              Date of Joining: {{ employee.DATE_OF_JOINING | date: 'shortDate'}}
+              <br>Location: {{ employee.LOCATION }}
+              <br>Email: {{ employee.EMAIL }}
+            </div>
+          </div>
         </div>
       </div>
     </ng-template>
   </div>
+</div>

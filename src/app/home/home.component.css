@@ -1,12 +1,13 @@
+
 nav {
   background-color: #99d0ff;
   height: 15vh;
-  width: 100vw;
+  width: 100%;
 }
 
 nav ul {
   height: 15vh;
-  width: 100vw;
+  width: 100%;
   padding: 0;
   margin-right: 20%;
   list-style-type: none;
@@ -67,3 +68,4 @@ img {
   display: flex;
   justify-content: space-between;
 }
+

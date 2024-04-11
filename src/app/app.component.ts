@@ -23,18 +23,17 @@ export class AppComponent implements OnInit {
     this.FormIntalization();
     // this.updateNavbarVisibility();
 
-    this.router.events.subscribe((event) => {
-      if (event instanceof NavigationEnd) {
-        const firstChild = this.activatedRoute.firstChild;
-        if (firstChild !== null && firstChild !== undefined) {
-          const routeConfig = firstChild.snapshot.routeConfig;
-          if (routeConfig !== null && routeConfig !== undefined) {
-            this.showNavbar = !(routeConfig?.path === '' || 'forgotPassword' ); 
-            // this.showNavbar = !(routeConfig?.path === '' || 'home' || 'forgotPassword' || 'forgetPage');
-          }
-        }
-      }
-    });
+    // this.router.events.subscribe((event) => {
+    //   if (event instanceof NavigationEnd) {
+    //     const firstChild = this.activatedRoute.firstChild;
+    //     if (firstChild !== null && firstChild !== undefined) {
+    //       const routeConfig = firstChild.snapshot.routeConfig;
+    //       if (routeConfig !== null && routeConfig !== undefined) {
+    //         this.showNavbar = !(routeConfig?.path === '' || 'forgotPassword' ); 
+    //       }
+    //     }
+    //   }
+    // });
     
     
     

@@ -1,5 +1,3 @@
-// employee.model.ts
-
 export interface Employee {
     EMPLOYEE_NUMBER: number;
     FIRST_NAME: string;
