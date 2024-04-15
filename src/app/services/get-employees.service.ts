@@ -9,7 +9,8 @@ import { Employee } from '../employee';
   providedIn: 'root'
 })
 export class GetEmployeesService {
-  private baseUrl = 'http://127.0.0.1:5000/getemployee';
+  private baseUrl = 'http://127.0.0.1:5000/getemployees';
+
   private baseUrlInitial = 'http://127.0.0.1:5000/getemployee/filterEmployees';
 
   constructor(private http: HttpClient) { }

@@ -1,0 +1,56 @@
+img {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+.Image1 {
+  background-color: #ffeaea;
+  height: 100vh;
+  
+}
+.main{
+  border-radius: 10px;
+  overflow:hidden;
+
+}
+
+.sub-container {
+  background-color: #99d0ff;
+  padding: 2%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.bg-white-card {
+  background-color: white;
+  padding: 5%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+button {
+  background-color: #99d0ff;
+  background-size: 15%;
+  padding: 15px;
+}
+
+
+
+.btnheading {
+  text-align: center;
+  border-radius: 15px;
+}
+
+.image {
+  margin-left: 30%;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+button {
+  border-radius: 25%;
+  height: 100%;
+}
+h1 {
+  font: Inter;
+}

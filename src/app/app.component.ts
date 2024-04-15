@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
-
+ 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -11,45 +11,41 @@ export class AppComponent implements OnInit {
   title = 'LoginFormofNFCS';
   submitted = false;
   loginForm: any = new FormGroup({});
-  showNavbar: boolean = true; // Change this based on your condition
+  showNavbar: boolean = true;
+  showHomeComponent: boolean = false;
   constructor(
     private formbuilder: FormBuilder,
     private router: Router,
     private activatedRoute: ActivatedRoute
-  ) {}
-  // showNavbar: boolean = true; // Change this based on your condition
+  ) { }
+  hideHomeComponentRoutes: string[] = ['', 'forgotPassword', 'signUp', 'OTPPage', 'NPUSucess', 'reset'];
+  shouldHideHomeComponent(): boolean {
+    const currentRoute = this.router.url.split('/')[1]; 
+    return this.hideHomeComponentRoutes.includes(currentRoute);
+  }
 
   ngOnInit(): void {
     this.FormIntalization();
-    // this.updateNavbarVisibility();
+    this.router.events.subscribe((event) => {
+        if (event instanceof NavigationEnd) {
+            this.updateNavbarVisibility();
+        }
+    });
+}
 
-    // this.router.events.subscribe((event) => {
-    //   if (event instanceof NavigationEnd) {
-    //     const firstChild = this.activatedRoute.firstChild;
-    //     if (firstChild !== null && firstChild !== undefined) {
-    //       const routeConfig = firstChild.snapshot.routeConfig;
-    //       if (routeConfig !== null && routeConfig !== undefined) {
-    //         this.showNavbar = !(routeConfig?.path === '' || 'forgotPassword' ); 
-    //       }
-    //     }
-    //   }
-    // });
-    
-    
-    
-
-
-  }
   updateNavbarVisibility() {
+
+      this.showNavbar = !this.shouldHideHomeComponent();
+    }
     
-  }
+  
   FormIntalization() {
     this.loginForm = this.formbuilder.group({
       userName: ['', Validators.required],
       password: ['', Validators.required],
     });
   }
-
+ 
   login() {
     console.log(this.loginForm.value.userName);
     if (
@@ -64,5 +60,8 @@ export class AppComponent implements OnInit {
       //  console.log(this.login);
       console.log('Incorrect user details');
     }
+  }
+  shouldShowHomeComponent(): boolean {
+    return this.showNavbar;
   }
 }

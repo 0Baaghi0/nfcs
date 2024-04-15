@@ -5,13 +5,13 @@ import { Employee } from '../employee';
 @Component({
   selector: 'app-landingpage',
   templateUrl: './landingpage.component.html',
-  styleUrls: ['./landingpage.component.css']
+  styleUrls: ['./landingpage.component.css'],
 })
 export class LandingpageComponent {
-
-  filterInput: string = ''; // Variable to store user input for filtering
+  filterInput: string = '';
   employeeExists: boolean = false;
   employees: Employee[] = [];
+  employeeCount: number = 0;
 
   constructor(private employeeService: GetEmployeesService) {}
 
@@ -51,15 +51,10 @@ export class LandingpageComponent {
         this.employeeExists = this.employees.length > 0;
       },
       (error) => {
+        alert("here")
         console.error('Error fetching employee details:', error);
         this.employeeExists = false;
       }
     );
   }
-
-
-
-
-
-
 }

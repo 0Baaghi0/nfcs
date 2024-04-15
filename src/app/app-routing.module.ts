@@ -10,11 +10,16 @@ import { SetupComponent } from './setup/setup.component';
 import { AddNewEmployeeComponent } from './add-new-employee/add-new-employee.component';
 import { BulkAddEmployeeComponent } from './bulk-add-employee/bulk-add-employee.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
-// import { FgPsPgComponent } from './fg-ps-pg/fg-ps-pg.component';
 import { SignupComponent } from './login/signup/signup.component';
 import { OtpComponent } from './otp/otp.component';
 import { ResetSuccessfulComponent } from './otp/reset-successful/reset-successful.component';
 import { ResetComponent } from './otp/reset/reset.component';
+import { AppointmentComponent } from './generate-letters/appointment/appointment.component';
+import { ConfirmationComponent } from './generate-letters/confirmation/confirmation.component';
+import { RelievingComponent } from './generate-letters/relieving/relieving.component';
+import { RevisionComponent } from './generate-letters/revision/revision.component';
+import { VerificationComponent } from './generate-letters/verification/verification.component';
+
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
@@ -27,11 +32,15 @@ const routes: Routes = [
   { path: 'landing', component: LandingpageComponent },
   { path: 'addNewEmployeePage', component: AddNewEmployeeComponent },
   { path: 'bulkAddEmployee', component: BulkAddEmployeeComponent },
-  // { path: 'forgetPage', component:FgPsPgComponent},
   { path: 'signUp', component: SignupComponent },
   { path: 'OTPPage', component: OtpComponent },
   { path: 'NPUSucess', component: ResetSuccessfulComponent },
-  { path:'reset', component:ResetComponent}
+  { path: 'reset', component:ResetComponent},
+  { path: 'appointment', component:AppointmentComponent},
+  { path: 'confirmation', component:ConfirmationComponent},
+  { path: 'relieving', component:RelievingComponent},
+  { path: 'revision', component:RevisionComponent},
+  { path: 'verification', component:VerificationComponent},
 ];
 
 @NgModule({

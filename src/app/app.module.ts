@@ -21,7 +21,7 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
 import { FileUploadModule } from 'ng2-file-upload';
 import { EmployeeCardDisplayComponent } from './view-employees/employee-card-display/employee-card-display.component';
 import { EmployeeFilterComponent } from './view-employees/employee-filter/employee-filter.component';
-import { EmployeeListDisplayComponent } from './landingpage/employee-list-display/employee-list-display.component';
+// import { EmployeeListDisplayComponent } from './landingpage/employee-list-display/employee-list-display.component';
 
 
 import { GetEmployeesService } from '../app/services/get-employees.service';
@@ -29,6 +29,12 @@ import { SignupComponent } from './login/signup/signup.component';
 import { OtpComponent } from './otp/otp.component';
 import { ResetComponent } from './otp/reset/reset.component';
 import { ResetSuccessfulComponent } from './otp/reset-successful/reset-successful.component';
+import { AppointmentComponent } from './generate-letters/appointment/appointment.component';
+import { RevisionComponent } from './generate-letters/revision/revision.component';
+import { ConfirmationComponent } from './generate-letters/confirmation/confirmation.component';
+import { RelievingComponent } from './generate-letters/relieving/relieving.component';
+import { VerificationComponent } from './generate-letters/verification/verification.component';
+import { DisplayComponent } from './landingpage/display/display.component';
 
 
 @NgModule({
@@ -46,11 +52,17 @@ import { ResetSuccessfulComponent } from './otp/reset-successful/reset-successfu
     ForgotPasswordComponent,
     EmployeeCardDisplayComponent,
     EmployeeFilterComponent,
-    EmployeeListDisplayComponent,
+    // EmployeeListDisplayComponent,
     SignupComponent,
     OtpComponent,
     ResetComponent,
     ResetSuccessfulComponent,
+    AppointmentComponent,
+    RevisionComponent,
+    ConfirmationComponent,
+    RelievingComponent,
+    VerificationComponent,
+    DisplayComponent,
   ],
   imports: [
     BrowserModule,
