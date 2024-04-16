@@ -1,14 +1,26 @@
 .fullScreen {
+  /* background-image: url("../assets/nfcs backgroundimage.png"); */
+  /* background-image: url("../../assets/image10.png"); */
   background-image: url("../../assets/loginBackground.png");
   height: 100vh;
   background-size: cover;
 }
 
 .card-container {
+  /* background-image: url("Rectangle"); */
+  /* background-image: url("../assets/Rectangle 536.png"); */
   background-size: cover;
+  /* height: 65vh;
+    width: 60vh; */
+  /* margin-left: 55%; */
   border-radius: 50px;
   margin-top: 25%;
+
+  /* display: flex; */
+  /* background-color: rgba(230, 236, 236, 0.781); */
+  /* background-color: white; */
   opacity: 0.9;
+
   flex-direction: column;
 }
 
@@ -16,14 +28,25 @@ input {
   border-radius: 10px;
   width: 90%;
   margin-left: 50px;
-  margin: 8%;
+  /* margin: 8%; */
+  margin: 5%;
 }
 
 a {
   margin: 3%;
 }
 
-.forgot-mb-4 {
+.forgot {
   display: flex;
   justify-content: space-between;
+}
+.img1 {
+  position: fixed;
+  padding-left: 2%;
+  margin-top: 30px;
+}
+.img2{
+  position: fixed;
+  padding-left: 2%;
+  margin-top: 35px;
 }

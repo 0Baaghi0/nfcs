@@ -1,0 +1,72 @@
+.main{
+    height: 100vh;
+    padding-top: 8vh;
+    padding-bottom: 10vh;
+}
+h5{
+    display: flex;
+    justify-content: center;
+    font-weight: bolder;
+    font-size: 4.5vh;
+}
+.bg-white-card {
+  background-color: white;
+  padding-top: 2%;
+  margin-left: 2%;
+  margin-right: 2%;
+  padding-bottom: 2%;
+  border-radius: 30px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  padding: 20px;
+}
+input {
+  border-radius: 20px;
+}
+.input-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.label-container {
+  /* margin-bottom: 10px; */
+}
+
+.input-container label {
+  font-weight: bold;
+}
+
+.input-container input,
+.input-container select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.input-container select {
+  width: 100%;
+}
+
+.button-container {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.reg {
+  margin-left: 2%;
+  height: 50px;
+  width: 10%;
+}
+
+
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}

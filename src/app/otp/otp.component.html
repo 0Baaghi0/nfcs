@@ -7,19 +7,29 @@
             <div class="col col-md-2"></div>
             <div class="col col-md-4 col-sm-8">
                 <div class="card-container shadow-lg bg-light rounded py-5">
-                    <h1 style="text-align: center; margin:5%; color: #0458A0; font-style: italic;">Enter OTP</h1>
-                    <h2 style="text-align: center;margin: 5%;color: #0458A0;" href="">--------</h2>
+                    <h1 style="appearance: textfield; text-align: center; margin:5%; color: #0458A0; font-style: italic;">Enter OTP</h1>
+
+                    <input style="text-align:center; margin: 5%;margin-left: 22%;color: #0458A0;" type="number" inputmode="numeric">
                     <div style="text-align: center;">
                         <button class="btn btn-primary" style="width: 50% " (click)="VERIFY()">VERIFY</button>
- 
                     </div>
+
+
+
+
+                    <!-- need to change it to button -->
                     <div class="SignIn ms-3">
-                        <a href=""style="">RESENDIT</a>
+                        <br> <br>
+                        <!-- <a href="" style="">RESENDIT</a> -->
+
+                        <!-- and one more component  -->
+
+                        <!-- on screen timer, after which the resend button is enabled   -->
                     </div>
- 
+
                     <ul>
-                        <li>OTP is sent your Registered E-mail address and Contact Number.</li>
-                        <li>If Not Received OTP or Time Out,Click on RESEND.</li>
-                        <li>After Verification Reset Your Password</li>
-                        <li>After Verification Login with new Credentials </li>
+                        <li>An OTP is sent to your registered email address and contact number.</li>
+                        <li>If you haven't received the OTP or if it times out, click on RESEND.</li>
+                        <li>After verification, reset your password.</li>
+                        <li>After verification, log in with the new credentials.</li>
                     </ul>

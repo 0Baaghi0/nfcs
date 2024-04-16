@@ -35,6 +35,8 @@ import { ConfirmationComponent } from './generate-letters/confirmation/confirmat
 import { RelievingComponent } from './generate-letters/relieving/relieving.component';
 import { VerificationComponent } from './generate-letters/verification/verification.component';
 import { DisplayComponent } from './landingpage/display/display.component';
+import { VerifySignUpComponent } from './login/verify-sign-up/verify-sign-up.component';
+import { ConfirmationSignUpComponent } from './login/confirmation-sign-up/confirmation-sign-up.component';
 
 
 @NgModule({
@@ -63,6 +65,8 @@ import { DisplayComponent } from './landingpage/display/display.component';
     RelievingComponent,
     VerificationComponent,
     DisplayComponent,
+    VerifySignUpComponent,
+    ConfirmationSignUpComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,21 +1,30 @@
 .fullScreen {
-    background-image: url("/assets/loginBackground.png");
- height: 100vh;
- background-size: cover;
+  background-image: url("../../../assets/loginBackground.png");
+  height: 100vh;
+  background-size: cover;
 }
 .card-container {
-   background-size: cover;
-   border-radius: 50px;
-   margin-top: 25%;
-   opacity: 0.9;
-   height: 90%;
-   flex-direction: column;
+  background-size: cover;
+  border-radius: 50px;
+  margin-top: 25%;
+  opacity: 0.9;
+  height: 90%;
+  flex-direction: column;
 }
- 
+
 input {
-   border-radius: 10px;
-   width: 90%;
-   margin-left: 50px;
-   margin: 8%;
- }
- 
+  border-radius: 10px;
+  width: 90%;
+  margin-left: 50px;
+  margin: 5%;
+}
+.img1 {
+  position: fixed;
+  padding-left: 2%;
+  margin-top: 32px;
+}
+.img2 {
+  position: fixed;
+  padding-left: 2%;
+  margin-top: 32px;
+}

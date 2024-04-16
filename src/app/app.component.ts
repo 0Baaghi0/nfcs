@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
     private router: Router,
     private activatedRoute: ActivatedRoute
   ) { }
-  hideHomeComponentRoutes: string[] = ['', 'forgotPassword', 'signUp', 'OTPPage', 'NPUSucess', 'reset'];
+  hideHomeComponentRoutes: string[] = ['', 'forgotPassword', 'signUp', 'OTPPage', 'NPUSucess', 'reset', 'vsup', 'cnfrmsup'];
   shouldHideHomeComponent(): boolean {
     const currentRoute = this.router.url.split('/')[1]; 
     return this.hideHomeComponentRoutes.includes(currentRoute);

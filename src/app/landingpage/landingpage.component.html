@@ -1,24 +1,16 @@
 <div class="main">
     <h2 id="empheading">EMPLOYEE DETAILS</h2>
-
     <form (ngSubmit)="onSubmit()">
         <!-- <label for="filter">Filter Employees:</label> -->
         <input type="text" id="filter1" [(ngModel)]="filterInput" name="filterInput"
             placeholder="Search Employee First/Last Name or Employee No or DOB or Email">
-
-
-
         <button type="submit" id="applyFilter"><span class="material-symbols-outlined">
                 filter_alt
             </span></button>
-
-
         <button type="button" (click)="removeFilter()" id="removeFilter"><span class="material-symbols-outlined">
                 filter_alt_off
             </span></button>
-
     </form>
-
     <div *ngIf="!employeeExists" id="errorContainer">
         <div class="icon">
             <span class="material-symbols-outlined">
@@ -27,11 +19,8 @@
         </div>
         <p>No employee found !!</p>
     </div>
-
     <div class="employee-list-container">
-        <!-- <app-display [employees]="employees" [employeeCount]="employeeCount"></app-display> -->
         <app-display [employees]="employees"></app-display>
     </div>
 </div>
-
 

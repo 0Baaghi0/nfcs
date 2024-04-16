@@ -6,43 +6,35 @@
             </div>
             <div class="col col-md-2"></div>
             <div class="col col-md-4 col-sm-8">
-                <!-- <img src="../assets/Rectangle 536.png" alt="box" style="margin-left: 15%; margin-top:5%; height: 80vh;"> -->
                 <div class="card-container shadow-lg bg-light rounded py-5">
-                    <h1 style="text-align: center; margin:2%; color: #0458A0; font-style: italic;">LOGIN</h1>
+                    <h1 style="text-align: center; margin:2%; color: #0458A0; font-family:monospace;">LOGIN</h1>
                     <form [formGroup]="loginForm" (ngSubmit)="login()">
-                        <div class="d-flex flex-column">
-                            <label for="" class="m-2"></label>
-                            <input type="text" placeholder="User Name" formControlName="userName" class="w-70 m-2 p-2">
+
+                        <div>
+                            <img src="../../assets/logos/usericon.png" alt="user" class="img1">
+                            <input type="text" placeholder="Username" formControlName="userName"
+                                style="width: 85%;padding: 6px; text-align: center;">
                             <div *ngIf="loginForm.get('userName')?.touched && loginForm.get('userName')?.hasError('required')"
                                 class="text-danger ms-3">
-                                Username is required
-                            </div>
-
-
+                                Username is required</div>
                         </div>
-                        <div class="d-flex flex-column">
-                            <label for="" class="m-2"></label>
+                        <div>
+                            <img src="../../assets/logos/password.png" alt="pwd" class="img2">
                             <input type="password" placeholder="Password" formControlName="password"
-                                class="w-70 m-2 p-2">
+                                style="width: 85%;padding: 6px; text-align: center;">
                             <div *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.hasError('required')"
                                 class="text-danger ms-3">
-                                Password is required
-                            </div>
-                            <div *ngIf="submitted" class="text-danger ms-3">Incorrect Username&&Password!!!</div>
-                            <div class="forgot-mb-4">
-                                <div class="SignIn ms-1">
-                                    <a routerLink="/signUp">SignIn</a>
-                                </div>
-                                <div class="me-4">
-                                    <a routerLink="/forgotPassword">ForgotPassword?</a>
-                                </div>
-                            </div>
-
-
+                                Password is Required</div>
                         </div>
-
-
-<br><br>    
+                        <div *ngIf="submitted" class="text-danger ms-3">Incorrect Username or Password !!</div>
+                        <div class="forgot mb-4">
+                            <div class="SignIn ms-3">
+                                <a routerLink="/signUp">Sign_Up?</a>
+                            </div>
+                            <div class="me-4">
+                                <a routerLink="/forgotPassword">Forgot_Password?</a>
+                            </div>
+                        </div>
                         <div style="text-align: center;">
                             <button class="btn btn-primary" style="width: 80%;" type="submit">LOGIN</button>
                         </div>

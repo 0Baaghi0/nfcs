@@ -1,1 +1,141 @@
-<p>signup works!</p>
+<div style="background-color:#ffeaea; height: 100vh;" class="main">
+    <div>
+        <h5><u>NEW USER REGISTRATION</u></h5>
+<br> <br>
+        <div class="bg-white-card">
+            <div>
+                <div class="m-3 btnheading">
+                    <form [formGroup]="RegisterForm" (ngSubmit)="onSubmit()">
+
+                        <div class="grid-container">
+                            <div class="input-container">
+                                <div class="label-container">
+
+                                    <label for="USERID">USERID*</label>
+                                </div>
+                                <input type="text" formControlName="USERID" required>
+
+                                <div *ngIf="RegisterForm.get('USERID')?.touched && RegisterForm.get('USERID')?.hasError('required')"
+                                    class="text-danger ms-3">
+                                    USERID is required
+                                </div>
+                            </div>
+
+                            <div class="input-container">
+                                <div class="label-container">
+                                    <label for="USERNAME">USERNAME*</label>
+                                </div>
+                                <input type="text" formControlName="USERNAME" required>
+
+                                <div *ngIf="RegisterForm.get('USERNAME')?.touched && RegisterForm.get('USERNAME')?.hasError('required')"
+                                    class="text-danger ms-3">
+                                    USERNAME is required
+                                </div>
+                            </div>
+
+                            <div class="input-container">
+                                <div class="label-container">
+                                    <label for="PASSWORD">PASSWORD*</label>
+                                </div>
+                                <input type="password" formControlName="PASSWORD" required>
+
+                                <div *ngIf="RegisterForm.get('PASSWORD')?.touched && RegisterForm.get('PASSWORD')?.hasError('required')"
+                                    class="text-danger ms-3">
+                                    PASSWORD is required
+                                </div>
+                            </div>
+
+
+                            <div class="input-container">
+                                <div class="label-container">
+                                    <label for="FIRSTNAME">FIRST NAME*</label>
+                                </div>
+                                <input type="text" formControlName="FIRSTNAME" required>
+
+                                <div *ngIf="RegisterForm.get('FIRSTNAME')?.touched && RegisterForm.get('FIRSTNAME')?.hasError('required')"
+                                    class="text-danger ms-3">
+                                    FIRSTNAME is required
+                                </div>
+                            </div>
+
+
+                            <div class="input-container">
+                                <div class="label-container">
+                                    <label for="MIDDLENAME">MIDDLE NAME*</label>
+                                </div>
+                                <input type="text" formControlName="MIDDLENAME" required>
+                            </div>
+
+                            <div class="input-container">
+                                <div class="label-container">
+                                    <label for="LASTNAME">LAST NAME*</label>
+                                </div>
+                                <input type="text" formControlName="LASTNAME" required>
+
+                                <div *ngIf="RegisterForm.get('LASTNAME')?.touched && RegisterForm.get('LASTNAME')?.hasError('required')"
+                                    class="text-danger ms-3">
+                                    LASTNAME is required
+                                </div>
+                            </div>
+
+
+                            <div class="input-container">
+                                <div class="label-container">
+                                    <label for="EMAIL">EMAIL*</label>
+                                </div>
+                                <input type="email" formControlName="EMAIL" required>
+
+                                <div *ngIf="RegisterForm.get('EMAIL')?.touched && RegisterForm.get('EMAIL')?.hasError('required')"
+                                    class="text-danger ms-3">
+                                    EMAIL is required
+                                </div>
+                            </div>
+
+
+                            <div class="input-container">
+                                <div class="label-container">
+                                    <label for="MOBILENUMBER">MOBILE NUMBER*</label>
+                                </div>
+                                <input type="number" formControlName="MOBILENUMBER" required>
+
+                                <div *ngIf="RegisterForm.get('MOBILENUMBER')?.touched && RegisterForm.get('MOBILENUMBER')?.hasError('required')"
+                                    class="text-danger ms-3">
+                                    MOBILE NUMBER is required
+                                </div>
+                            </div>
+
+
+                            <div class="input-container">
+                                <div class="label-container">
+                                    <label for="USERTYPE">User Type*</label>
+                                </div>
+
+
+                                <select name="subject" id="subject" formControlName="USERTYPE" required>
+                                    <option value="" selected="selected">Select User Type</option>
+                                    <option value="1">ADMIN</option>
+                                    <option value="2">HR</option>
+
+                                </select>
+
+                                <div *ngIf="RegisterForm.get('USERTYPE')?.touched && RegisterForm.get('USERTYPE')?.hasError('required')"
+                                    class="text-danger ms-3">
+                                    USER TYPE is required
+                                </div>
+
+                            </div>
+
+                            <div class="button-container">
+                                <button type="submit" class="btn btn-primary reg">Submit</button>
+                                <button type="reset" class="btn btn-primary reg">Clear</button>
+                                <button type="button" class="btn btn-primary reg">Cancel</button>
+                            </div>
+                        </div>
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

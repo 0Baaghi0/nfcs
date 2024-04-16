@@ -4,47 +4,43 @@
             <div class="col col-md-6">
                 <img class=" mt-4 w-50" src="../../../assets/NORTHFACE.png" alt="logo">
             </div>
- 
             <div class="col col-md-2"></div>
             <div class="col col-md-4 col-sm-8">
                 <div class="card-container shadow-lg bg-light rounded py-5">
-                    <h1 style="text-align: center; margin:2%; color: #0458A0; font-style: italic;">RESET PASSWORD</h1>
-                    <form [formGroup]= "forgotpassword"  (ngSubmit)="SaveNewPassword()">
+                    <h1 style="text-align: center; margin:2%; color: #0458A0;font-family:monospace">RESET PASSWORD</h1>
+                    <form [formGroup]="forgotpassword" (ngSubmit)="SaveNewPassword()">
                         <div class="d-flex flex-column">
                             <label for="" class="m-3"></label>
-                            <div class="icon"></div>
-                            <div class="icon">
-                                <i class="fa-solid fa-user"></i>
+                            <div>
+                                <img src="../../../assets/logos/password.png" alt="user" class="img1">
+                                <input type="text" placeholder="        Enter New Password"
+                                    formControlName="EnterNewPassword"
+                                    style="width: 85%;padding: 6px; text-align: center;">
                             </div>
-                            <input type="text" placeholder="EnterNewPassword" formControlName="EnterNewPassword" class="w-70 m-2 p-2">
                             <div *ngIf=" forgotpassword.get('EnterNewPassword')?.touched &&  forgotpassword.get('EnterNewPassword')?.hasError('required')"
                                 class="text-danger ms-3">
                                 NewPassword is Entered
                             </div>
- 
                         </div>
-                        <div class="d-flex flex-column">
-                            <label for="" class="m-2"></label>
-                            <input type="password" placeholder="ReEnterNewPassword" formControlName="ReEnterPassword"
-                                class="w-70 m-2 p-2"><i class="fa-solid fa-key"></i>
-                            <div *ngIf=" forgotpassword.get('ReEnterPassword')?.touched &&  forgotpassword.get('ReEnterPassword')?.hasError('required')"
-                                class="text-danger ms-3">
-                               please Re-Enter NewPassword
-                            </div>
- 
-                             <div *ngIf="submitted" class="text-danger ms-3">
-                                Incorrect username&password
- 
-                            </div>
+                        <div>
+                            <img src="../../../assets/logos/password.png" alt="pwd" class="img2">
+                            <input type="pwd" placeholder="        Re-Enter New Password"
+                                formControlName="ReEnterPassword" style="width: 85%;padding: 6px; text-align: center;">
+                        </div>
+                        <div *ngIf=" forgotpassword.get('ReEnterPassword')?.touched &&  forgotpassword.get('ReEnterPassword')?.hasError('required')"
+                            class="text-danger ms-3">
+                            please Re-Enter NewPassword
+                        </div>
+
+                        <div *ngIf="submitted" class="text-danger ms-3">
+                            Incorrect username&password
                         </div>
                         <div style="text-align: center; margin-top: 15%;">
-                            <button class="btn btn-primary" style="width: 50%;"  type="submit">SaveNewPassword</button>
+                            <button class="btn btn-primary" style="width: 50%;" type="submit">SaveNewPassword</button>
                         </div>
- 
                     </form>
                 </div>
             </div>
         </div>
- 
     </div>
-  </div>
+</div>

@@ -19,6 +19,8 @@ import { ConfirmationComponent } from './generate-letters/confirmation/confirmat
 import { RelievingComponent } from './generate-letters/relieving/relieving.component';
 import { RevisionComponent } from './generate-letters/revision/revision.component';
 import { VerificationComponent } from './generate-letters/verification/verification.component';
+import { ConfirmationSignUpComponent } from './login/confirmation-sign-up/confirmation-sign-up.component';
+import { VerifySignUpComponent } from './login/verify-sign-up/verify-sign-up.component';
 
 
 const routes: Routes = [
@@ -41,6 +43,8 @@ const routes: Routes = [
   { path: 'relieving', component:RelievingComponent},
   { path: 'revision', component:RevisionComponent},
   { path: 'verification', component:VerificationComponent},
+  { path: 'vsup', component:VerifySignUpComponent},
+  { path: 'cnfrmsup', component:ConfirmationSignUpComponent},
 ];
 
 @NgModule({
