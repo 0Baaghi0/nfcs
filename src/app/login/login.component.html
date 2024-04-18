@@ -13,23 +13,32 @@
                         <div>
                             <img src="../../assets/logos/usericon.png" alt="user" class="img1">
                             <input type="text" placeholder="Username" formControlName="userName"
-                                style="width: 85%;padding: 6px; text-align: center;">
+                                style="width: 85%;padding: 6px; text-align: center; ">
                             <div *ngIf="loginForm.get('userName')?.touched && loginForm.get('userName')?.hasError('required')"
                                 class="text-danger ms-3">
-                                Username is required</div>
+                                username is required</div>
                         </div>
-                        <div>
-                            <img src="../../assets/logos/password.png" alt="pwd" class="img2">
-                            <input type="password" placeholder="Password" formControlName="password"
-                                style="width: 85%;padding: 6px; text-align: center;">
+
+
+                        <div class="input"> 
+                            <span class="icon"><img src="../../assets/logos/password.png" alt="Password Icon"></span>
+                            <input type="password" placeholder="Password" id="password" formControlName="password"
+                                style="width: 85%;padding: 6px; text-align: center; ">
+                            <div>
+                                <img class=img3 src="../../assets/logos/Light eye.png" alt="Eye Icon" type="button"
+                                    (click)="eyeEvent()">
+                            </div>
                             <div *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.hasError('required')"
                                 class="text-danger ms-3">
-                                Password is Required</div>
+                                Password is required</div>
                         </div>
-                        <div *ngIf="submitted" class="text-danger ms-3">Incorrect Username or Password !!</div>
+
+                        <div *ngIf="submitted" class="text-danger ms-3">Incorrect Username or Password!!!</div>
                         <div class="forgot mb-4">
                             <div class="SignIn ms-3">
-                                <a routerLink="/signUp">Sign_Up?</a>
+
+                                <a routerLink="/signUp">Sign_Up</a>
+
                             </div>
                             <div class="me-4">
                                 <a routerLink="/forgotPassword">Forgot_Password?</a>
@@ -45,3 +54,12 @@
 
     </div>
 </div>
+
+
+<!-- 
+
+
+
+
+
+ -->

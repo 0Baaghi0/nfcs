@@ -1,1 +1,13 @@
-appointment
+<div>
+  <label for="templateName">Template Name:</label>
+  <input type="text" id="templateName" [(ngModel)]="templateName">
+
+
+
+  <input type="file" id="fileInput" (click)="handleFileInput($event)">
+  <button (click)="uploadTemplate()">Upload Template</button>
+</div>
+
+<div>
+  <button (click)="displayPdf(templateName)">View</button>
+</div>

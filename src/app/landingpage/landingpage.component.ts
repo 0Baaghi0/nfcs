@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GetEmployeesService } from '../services/get-employees.service';
 import { Employee } from '../employee';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-landingpage',
   templateUrl: './landingpage.component.html',
@@ -13,7 +13,8 @@ export class LandingpageComponent {
   employees: Employee[] = [];
   employeeCount: number = 0;
 
-  constructor(private employeeService: GetEmployeesService) {}
+
+  constructor(private employeeService: GetEmployeesService , private router: Router) {}
 
   ngOnInit() {
     this.fetchEmployees();
@@ -38,7 +39,9 @@ export class LandingpageComponent {
     this.employees = [];
     this.fetchEmployees();
   }
-
+  addEmpLanding(){
+    this.router.navigate(['//addNewEmployeePage']);
+  }
   onSubmit() {
     if (!this.filterInput.trim()) {
       alert('Please enter a value');
