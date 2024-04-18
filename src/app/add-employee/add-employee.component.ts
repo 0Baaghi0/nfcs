@@ -35,6 +35,7 @@ export class AddEmployeeComponent implements OnInit {
   }
 
   onSubmit() {
+
     if (this.employeeForm.valid) {
       // const employeeData = this.employeeForm.value;
 
