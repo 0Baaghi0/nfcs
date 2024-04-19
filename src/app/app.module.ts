@@ -34,9 +34,10 @@ import { RevisionComponent } from './generate-letters/revision/revision.componen
 import { ConfirmationComponent } from './generate-letters/confirmation/confirmation.component';
 import { RelievingComponent } from './generate-letters/relieving/relieving.component';
 import { VerificationComponent } from './generate-letters/verification/verification.component';
-import { DisplayComponent } from './landingpage/display/display.component';
+// import { DisplayComponent } from './landingpage/display/display.component';
 import { VerifySignUpComponent } from './login/verify-sign-up/verify-sign-up.component';
 import { ConfirmationSignUpComponent } from './login/confirmation-sign-up/confirmation-sign-up.component';
+import { AddTemplateComponent } from './generate-letters/add-template/add-template.component';
 
 
 @NgModule({
@@ -64,9 +65,10 @@ import { ConfirmationSignUpComponent } from './login/confirmation-sign-up/confir
     ConfirmationComponent,
     RelievingComponent,
     VerificationComponent,
-    DisplayComponent,
+    // DisplayComponent,
     VerifySignUpComponent,
     ConfirmationSignUpComponent,
+    AddTemplateComponent,
   ],
   imports: [
     BrowserModule,

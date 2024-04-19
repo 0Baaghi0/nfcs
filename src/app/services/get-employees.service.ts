@@ -23,15 +23,15 @@ export class GetEmployeesService {
     return this.http.get<Employee[]>(url);
   }
 
-  uploadTemplate(templateName: string, file: File): Observable<any> {
+  uploadTemplate(templateName: string, fileToUpload: File): Observable<any> {
     const formData: FormData = new FormData();
-    formData.append('template_name', templateName);
-    formData.append('TEMPLATE', file);
+    formData.append('TEMPLATE_NAME', templateName);
+    formData.append('TEMPLATE', fileToUpload);
     return this.http.post(this.uploadUrl, formData);
   }
 
-  displayPdf(templateName: string): void {
-    const apiUrl = `${this.convertRtfUrl}/${templateName}`;
+  displayPdf(templateId: number): any {
+    const apiUrl = `${this.convertRtfUrl}/${templateId}`;
     window.open(apiUrl, '_blank');
   }
 }

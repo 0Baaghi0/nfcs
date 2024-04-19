@@ -1,41 +1,100 @@
-.main{
-    background-color:#ffeaea;
-    height: 100vh;
-    width: 100%;
-}
-#empheading{
-    margin-left: 10vw;
-    padding-top: 6vh;
+.main {
+  background-color: #ffeaea;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
 }
 
-.serach-bar{
-    margin-top: 6vh;
-    height: 5vh;
-    display: flex;  
-    justify-content:center;
-    
-}
-#filter1{
-
-    width: 60%;
-    height: 6vh;
-    align-items:center;
-    border: hidden;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+#empheading {
+  margin-left: 100px;
+  padding-top: 20px;
 }
 
- #applyFilter{
-    font-size: 3px;
-    position: absolute;
-    top: 32.75vh;
-    left: 53vw;
-    border-radius: 10px;
-    
+.search-bar {
+  margin-top: 20px;
+  margin-left: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4vh;
 }
-#removeFilter{
-    font-size: 3px;
-    position: absolute;
-    top: 32.75vh;
-    left: 56.3vw;
-    border-radius: 10px;
+
+.employee-table {
+  margin-top: 4vh;
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  background-color: white;
+  margin-top: 20px;
+  border-radius: 20px; 
+}
+
+
+.employee-list-display {
+  height: 100%;
+  width: 85%;
+  margin-left: 7.5%;
+  overflow: hidden;
+}
+
+#filterInput {
+  width: 60%;
+  height: 40px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.filter-btn {
+  
+  position: absolute;
+  top: 30.3%;
+  left: 63%;
+  font-size: 10px;
+  background-color: #99d0ff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 3px 8px;
+  cursor: pointer;
+}
+
+.rem {
+  position: absolute;
+  top: 30.3%;
+  left: 66.5%;
+}
+
+.add{
+  position: absolute;
+  top: 30%;
+  left: 75%;
+}
+
+.employee-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.employee-table th,
+.employee-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.employee-table th {
+  background-color: #99d0ff;
+  color: #fff;
+}
+
+.single-employee:hover {
+  background-color: #f2f2f2;
+}
+
+.no-employees-msg {
+  text-align: center;
+  font-style: italic;
 }

@@ -37,7 +37,6 @@ export class AddEmployeeComponent implements OnInit {
   onSubmit() {
 
     if (this.employeeForm.valid) {
-      // const employeeData = this.employeeForm.value;
 
       const employeeData = {
         EMPLOYEE_NUMBER:this.employeeForm.value['employeeNumber'],
@@ -52,7 +51,7 @@ export class AddEmployeeComponent implements OnInit {
         (response) => {
           alert("Employee saved successfully");
           console.log('Employee saved successfully', response);
-          // Handle successful response (e.g., reset form)
+          this.employeeForm.reset();
         },
         (error) => {
           alert("Data not sent");

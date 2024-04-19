@@ -1,0 +1,7 @@
+<div>
+  <label for="templateName">Template Name:</label>
+  <input type="text" id="templateName" [(ngModel)]="templateName">
+
+  <input type="file" id="fileInput" (change)="handleFileInput($event)">
+  <button (click)="uploadTemplate()">Upload Template</button>
+</div>

@@ -40,7 +40,7 @@ export class LandingpageComponent {
     this.fetchEmployees();
   }
   addEmpLanding(){
-    this.router.navigate(['//addNewEmployeePage']);
+    this.router.navigate(['/addNewEmployeePage']);
   }
   onSubmit() {
     if (!this.filterInput.trim()) {
@@ -54,7 +54,7 @@ export class LandingpageComponent {
         this.employeeExists = this.employees.length > 0;
       },
       (error) => {
-        alert("here")
+        alert("Error fetching employee details:")
         console.error('Error fetching employee details:', error);
         this.employeeExists = false;
       }

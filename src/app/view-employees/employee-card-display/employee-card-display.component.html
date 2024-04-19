@@ -13,14 +13,14 @@
         <div class="employee-card" *ngFor="let employee of employees">
           <div class="employee-details">
             <div class="employee-details1">
-              <div class="img-div"></div> <br>
+              <div class="img-div"><img src="../../../assets/images/userDP.jpg" alt="userimage"></div> <br>
               <p>Employee ID: {{ employee.EMPLOYEE_NUMBER }} <br>
                 Name: {{ employee.FIRST_NAME }} {{ employee.LAST_NAME }}
             </div>
             <div class="employee-details2">
               <p><br><span class="material-symbols-outlined">
                   calendar_month
-                </span>{{ employee.DATE_OF_JOINING | date: 'shortDate'}}
+                </span>{{ employee.DATE_OF_BIRTH | date:'shortDate'}}
                 <br><span class="material-symbols-outlined">
                   home_pin
                 </span>{{ employee.LOCATION }}

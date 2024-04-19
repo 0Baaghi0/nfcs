@@ -1,34 +1,52 @@
 <div class="main">
-    <h3 id="empheading">EMPLOYEE DETAILS</h3>
-    <div class="serach-bar">
-        <input type="text" id="filter1" [(ngModel)]="filterInput" name="filterInput"
-            placeholder="Search Employee First/Last Name or Employee No or DOB or Email">
-            <button class="btn btn-3 btn-primary" (click)="addEmpLanding()">Add Employee</button>
-    </div>
-    <form (ngSubmit)="onSubmit()">
+  <h3 id="empheading">EMPLOYEE DETAILS</h3>
+  <div class="search-bar">
+    <input type="text" id="filterInput" [(ngModel)]="filterInput" name="filterInput" placeholder="Search Employee First/Last Name or Employee No or DOB or Email">
+    <button class="btn btn-3 btn-primary add" style="background-color: #99d0ff; color: #6b106a; border: 2px solid red"
+     (click)="addEmpLanding()"><b>Add Employee</b></button>
+  </div>
+  <form (ngSubmit)="onSubmit()">
+    <button type="submit" class="filter-btn">
+      <span class="material-symbols-outlined">filter_alt</span>
+    </button>
+    <button type="button" class="filter-btn rem" (click)="removeFilter()">
+      <span class="material-symbols-outlined">filter_alt_off</span>
+    </button>
+  </form> 
 
-        <button type="submit" id="applyFilter">
-            <span class="material-symbols-outlined">
-                filter_alt
-            </span>
-        </button>
-        <button type="button" (click)="removeFilter()" id="removeFilter">
-            <span class="material-symbols-outlined">
-                filter_alt_off
-            </span>
-        </button>
-    </form>
-
-
-    <div *ngIf="!employeeExists" id="errorContainer">
-        <div class="icon">
-            <span class="material-symbols-outlined">
-                disabled_by_default
-            </span>
-        </div>
-        <p>No employee found !!</p>
+  <div *ngIf="!employeeExists" id="errorContainer">
+    <div class="icon">
+      <span class="material-symbols-outlined">disabled_by_default</span>
     </div>
-    <div class="employee-list-container">
-        <app-display [employees]="employees"></app-display>
-    </div>
+    <p>No employees found!</p>
+  </div>
+
+  <div class="employee-list-display">
+    <table class="employee-table">
+      <thead>
+        <tr class="heading">
+          <th  style="text-align: center;  color: #6b106a;">Emp No</th>
+          <th  style="text-align: center;  color: #6b106a;">Name</th>
+          <th  style="text-align: center;  color: #6b106a;">Date of Birth</th>
+          <th  style="text-align: center;  color: #6b106a;">Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <ng-container *ngIf="employeeExists; else noEmployees">
+          <tr *ngFor="let employee of employees" class="single-employee">
+            <td  style="text-align: center;">{{ employee.EMPLOYEE_NUMBER }}</td>
+            <td  style="text-align: center;">{{ employee.FIRST_NAME }} {{ employee.LAST_NAME }}</td>
+            <td  style="text-align: center;">{{ employee.DATE_OF_BIRTH | date:'shortDate'}}</td>
+            <td  style="text-align: center;">{{ employee.EMAIL }}</td>
+          </tr>
+        </ng-container>
+
+        <ng-template #noEmployees>
+          <tr>
+            <td colspan="5" class="no-employees-msg">No employees found</td>
+          </tr>
+        </ng-template>
+      </tbody>
+    </table>
+  </div>
 </div>

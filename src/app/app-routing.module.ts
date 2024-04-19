@@ -21,6 +21,7 @@ import { RevisionComponent } from './generate-letters/revision/revision.componen
 import { VerificationComponent } from './generate-letters/verification/verification.component';
 import { ConfirmationSignUpComponent } from './login/confirmation-sign-up/confirmation-sign-up.component';
 import { VerifySignUpComponent } from './login/verify-sign-up/verify-sign-up.component';
+import { AddTemplateComponent} from './generate-letters/add-template/add-template.component'
 
 
 const routes: Routes = [
@@ -45,6 +46,7 @@ const routes: Routes = [
   { path: 'verification', component:VerificationComponent},
   { path: 'vsup', component:VerifySignUpComponent},
   { path: 'cnfrmsup', component:ConfirmationSignUpComponent},
+  { path: 'addTemplate', component:AddTemplateComponent}
 ];
 
 @NgModule({

@@ -2,6 +2,8 @@
 .main {
   background-color: #ffeaea;
   height: 100%;
+  
+ 
   /* height: auto; */
   
 }
@@ -23,7 +25,13 @@
   margin-top: 4vh;
   display: flex;
   flex-wrap: wrap;
+  
   /* justify-content: space-evenly; */
+}
+img{
+  height: 100px;
+  width: 100px;
+  margin-left: 11px;
 }
 .img-div {
   margin-top: 2vh;
@@ -31,14 +39,15 @@
   width: 9vw;  
   border-radius: 50%;
   background-color: white;
+  overflow: hidden;
 }
 .employee-card {
   width: calc(22% - 10px);
   margin-right: 1.5vw;
   margin-left: 1.5vw;
   margin-bottom: 40px;
-  border-radius: 5px;
-  /* box-sizing: border-box; */
+  border-radius: 15px;
+  overflow: hidden;
 }
 
 /* Additional styling for employee details */
@@ -56,6 +65,7 @@
 .employee-details2 {
   background-color: #c5f4fe;
   height: 14vh;
+  
 
 }
 
