@@ -4,4 +4,12 @@
 
   <input type="file" id="fileInput" (change)="handleFileInput($event)">
   <button (click)="uploadTemplate()">Upload Template</button>
+
+  <!-- Display content of the uploaded RTF file -->
+  <div *ngIf="fileContent">
+    <p>Uploaded File Content:</p>
+    <div class="rtf-view">
+      <pre>{{ fileContent }}</pre>
+    </div>
+  </div>
 </div>

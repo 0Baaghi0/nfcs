@@ -50,7 +50,7 @@ export class AppointmentComponent implements OnInit {
 
   addNewTemplate() {
     this.router.navigate(['/addTemplate']);
-    // this.idCount++
+    
   }
   
 

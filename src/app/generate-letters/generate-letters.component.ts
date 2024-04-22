@@ -16,13 +16,10 @@ export class GenerateLettersComponent {
   revisionletter() {
     this.router.navigate(['./revision']);
   }
-  conformationletter() {
-    this.router.navigate(['./confirmation']);
-  }
   relevingletter() {
-    this.router.navigate(['./relieving']);
+    this.router.navigate(['./offer']);
   }
-  verificationletter() {
+offerletter() {
     this.router.navigate(['./verification']);
   }
 }

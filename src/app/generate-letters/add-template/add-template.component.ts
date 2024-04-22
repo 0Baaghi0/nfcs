@@ -16,15 +16,35 @@ export class AddTemplateComponent implements OnInit {
   templateName!: string;
   templateId!: number;
   fileToUpload: File | null = null;
+  filePreviewUrl: string | ArrayBuffer | null = null;
+  fileContent: string | null = null; 
+
   constructor(
     private route: ActivatedRoute,
     private employeesService: GetEmployeesService,
     private http: HttpClient,
     private router: Router
   ) {}
+
   ngOnInit(): void {}
+
   handleFileInput(event: any) {
     this.fileToUpload = event.target.files[0];
+
+    // Display preview of the uploaded file
+    if (this.fileToUpload) {
+      this.previewFile(this.fileToUpload);
+    }
+  }
+
+
+  // Function to preview the uploaded file
+  previewFile(file: File) {
+    const reader = new FileReader();
+    reader.readAsText(file);
+    reader.onload = () => {
+      this.fileContent = reader.result as string;
+    };
   }
 
   uploadTemplate() {
@@ -32,17 +52,17 @@ export class AddTemplateComponent implements OnInit {
       alert('Please provide both template name and file.');
       return;
     }
-    this.employeesService.uploadTemplate(this.templateName, this.fileToUpload).subscribe(
-        (response) => {
-          console.log(response);
-          alert('Template uploaded successfully.');
 
-          this.idCountUpdated.emit(this.idCount);
-        },
-        (error) => {
-          console.error(error);
-          // alert('Error uploading template. Here');
-        }
-      );
+    this.employeesService.uploadTemplate(this.templateName, this.fileToUpload).subscribe(
+      (response: any) => {
+        console.log(response);
+        alert('Template uploaded successfully.');
+        this.idCountUpdated.emit(this.idCount);
+      },
+      (error) => {
+        console.error(error);
+        alert('Error uploading template.');
+      }
+    );
   }
 }

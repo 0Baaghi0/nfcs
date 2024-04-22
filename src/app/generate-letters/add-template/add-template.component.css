@@ -1,0 +1,11 @@
+.rtf-view{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10vh;
+}
+pre{
+    
+    height: 30vh;
+    width: 80vw;
+}

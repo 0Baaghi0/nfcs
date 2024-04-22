@@ -32,6 +32,6 @@ export class GetEmployeesService {
 
   displayPdf(templateId: number): any {
     const apiUrl = `${this.convertRtfUrl}/${templateId}`;
-    window.open(apiUrl, '_blank');
+    window.open(apiUrl);
   }
 }

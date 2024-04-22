@@ -15,10 +15,10 @@ import { OtpComponent } from './otp/otp.component';
 import { ResetSuccessfulComponent } from './otp/reset-successful/reset-successful.component';
 import { ResetComponent } from './otp/reset/reset.component';
 import { AppointmentComponent } from './generate-letters/appointment/appointment.component';
-import { ConfirmationComponent } from './generate-letters/confirmation/confirmation.component';
-import { RelievingComponent } from './generate-letters/relieving/relieving.component';
+// import { ConfirmationComponent } from './generate-letters/confirmation/confirmation.component';
+// import { RelievingComponent } from './generate-letters/relieving/relieving.component';
 import { RevisionComponent } from './generate-letters/revision/revision.component';
-import { VerificationComponent } from './generate-letters/verification/verification.component';
+import { OfferComponent } from './generate-letters/offer/offer.component';
 import { ConfirmationSignUpComponent } from './login/confirmation-sign-up/confirmation-sign-up.component';
 import { VerifySignUpComponent } from './login/verify-sign-up/verify-sign-up.component';
 import { AddTemplateComponent} from './generate-letters/add-template/add-template.component'
@@ -40,10 +40,10 @@ const routes: Routes = [
   { path: 'NPUSucess', component: ResetSuccessfulComponent },
   { path: 'reset', component:ResetComponent},
   { path: 'appointment', component:AppointmentComponent},
-  { path: 'confirmation', component:ConfirmationComponent},
-  { path: 'relieving', component:RelievingComponent},
+  // { path: 'confirmation', component:ConfirmationComponent},
+  { path: 'offer', component:OfferComponent},
   { path: 'revision', component:RevisionComponent},
-  { path: 'verification', component:VerificationComponent},
+  // { path: 'verification', component:VerificationComponent},
   { path: 'vsup', component:VerifySignUpComponent},
   { path: 'cnfrmsup', component:ConfirmationSignUpComponent},
   { path: 'addTemplate', component:AddTemplateComponent}
