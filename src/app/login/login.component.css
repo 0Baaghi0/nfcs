@@ -5,22 +5,22 @@
   height: 100vh;
   background-size: cover;
 }
- 
+
 .card-container {
   /* background-image: url("Rectangle"); */
   /* background-image: url("../assets/Rectangle 536.png"); */
   background-size: cover;
   border-radius: 50px;
   margin-top: 25%;
- 
+
   /* display: flex; */
   /* background-color: rgba(230, 236, 236, 0.781); */
   /* background-color: white; */
   opacity: 0.9;
- 
+
   flex-direction: column;
 }
- 
+
 input {
   border-radius: 10px;
   width: 90%;
@@ -28,26 +28,26 @@ input {
   /* margin: 8%; */
   margin: 5%;
 }
- 
+
 a {
   margin: 3%;
 }
- 
+
 .forgot {
   display: flex;
   justify-content: space-between;
 }
-.img1{
+.img1 {
   position: fixed;
   padding-left: 2%;
   margin-top: 29px;
 }
-.img2{
+.img2 {
   position: fixed;
   padding-left: 2%;
   margin-top: 35px;
 }
-.img3{
+.img3 {
   border: hidden;
   position: fixed;
   left: 86%;
@@ -59,11 +59,10 @@ a {
   margin-left: 20px;
   border-radius: 10px;
 }
- 
+
 .icon {
-  position:fixed;
+  position: fixed;
   transform: translateY(-50%);
   left: 67%;
-  margin-top:2.7%;
+  margin-top: 2.7%;
 }
- 

@@ -6,12 +6,10 @@ img {
 .Image1 {
   background-color: #ffeaea;
   height: 100vh;
-  
 }
-.main{
+.main {
   border-radius: 10px;
-  overflow:hidden;
-
+  overflow: hidden;
 }
 
 .sub-container {
@@ -32,8 +30,6 @@ button {
   background-size: 15%;
   padding: 15px;
 }
-
-
 
 .btnheading {
   text-align: center;

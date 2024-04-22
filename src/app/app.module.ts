@@ -29,15 +29,16 @@ import { SignupComponent } from './login/signup/signup.component';
 import { OtpComponent } from './otp/otp.component';
 import { ResetComponent } from './otp/reset/reset.component';
 import { ResetSuccessfulComponent } from './otp/reset-successful/reset-successful.component';
-import { AppointmentComponent } from './generate-letters/appointment/appointment.component';
-import { RevisionComponent } from './generate-letters/revision/revision.component';
+// import { AppointmentComponent } from './generate-letters/appointment/appointment.component';
+// import { RevisionComponent } from './generate-letters/revision/revision.component';
 // import { ConfirmationComponent } from './generate-letters/confirmation/confirmation.component';
 // import { RelievingComponent } from './generate-letters/relieving/relieving.component';
-import { OfferComponent } from './generate-letters/offer/offer.component';
+// import { OfferComponent } from './generate-letters/offer/offer.component';
 // import { DisplayComponent } from './landingpage/display/display.component';
 import { VerifySignUpComponent } from './login/verify-sign-up/verify-sign-up.component';
 import { ConfirmationSignUpComponent } from './login/confirmation-sign-up/confirmation-sign-up.component';
 import { AddTemplateComponent } from './generate-letters/add-template/add-template.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 @NgModule({
@@ -59,14 +60,15 @@ import { AddTemplateComponent } from './generate-letters/add-template/add-templa
     OtpComponent,
     ResetComponent,
     ResetSuccessfulComponent,
-    AppointmentComponent,
-    RevisionComponent,
+    // AppointmentComponent,
+    // RevisionComponent,
     // ConfirmationComponent,
     // RelievingComponent,
-    OfferComponent,
+    // OfferComponent,
     VerifySignUpComponent,
     ConfirmationSignUpComponent,
     AddTemplateComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,

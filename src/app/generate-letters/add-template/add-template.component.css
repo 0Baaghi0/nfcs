@@ -1,11 +1,20 @@
-.rtf-view{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10vh;
+.main {
+  height: 30vh;
+  margin-top: 100px;
+  margin-left: 250px;
 }
-pre{
-    
-    height: 30vh;
-    width: 80vw;
+
+.main-title {
+  align-items: center;
+}
+
+.rtf-view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10vh;
+}
+pre {
+  height: 30vh;
+  width: 60vw;
 }

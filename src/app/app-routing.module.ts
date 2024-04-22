@@ -14,14 +14,15 @@ import { SignupComponent } from './login/signup/signup.component';
 import { OtpComponent } from './otp/otp.component';
 import { ResetSuccessfulComponent } from './otp/reset-successful/reset-successful.component';
 import { ResetComponent } from './otp/reset/reset.component';
-import { AppointmentComponent } from './generate-letters/appointment/appointment.component';
+// import { AppointmentComponent } from './generate-letters/appointment/appointment.component';
 // import { ConfirmationComponent } from './generate-letters/confirmation/confirmation.component';
 // import { RelievingComponent } from './generate-letters/relieving/relieving.component';
-import { RevisionComponent } from './generate-letters/revision/revision.component';
-import { OfferComponent } from './generate-letters/offer/offer.component';
+// import { RevisionComponent } from './generate-letters/revision/revision.component';
+// import { OfferComponent } from './generate-letters/offer/offer.component';
 import { ConfirmationSignUpComponent } from './login/confirmation-sign-up/confirmation-sign-up.component';
 import { VerifySignUpComponent } from './login/verify-sign-up/verify-sign-up.component';
 import { AddTemplateComponent} from './generate-letters/add-template/add-template.component'
+import { ProfileComponent } from './profile/profile.component';
 
 
 const routes: Routes = [
@@ -39,14 +40,15 @@ const routes: Routes = [
   { path: 'OTPPage', component: OtpComponent },
   { path: 'NPUSucess', component: ResetSuccessfulComponent },
   { path: 'reset', component:ResetComponent},
-  { path: 'appointment', component:AppointmentComponent},
+  // { path: 'appointment', component:AppointmentComponent},
   // { path: 'confirmation', component:ConfirmationComponent},
-  { path: 'offer', component:OfferComponent},
-  { path: 'revision', component:RevisionComponent},
+  // { path: 'offer', component:OfferComponent},
+  // { path: 'revision', component:RevisionComponent},
   // { path: 'verification', component:VerificationComponent},
   { path: 'vsup', component:VerifySignUpComponent},
   { path: 'cnfrmsup', component:ConfirmationSignUpComponent},
-  { path: 'addTemplate', component:AddTemplateComponent}
+  { path: 'addTemplate', component:AddTemplateComponent},
+  { path: 'profile', component:ProfileComponent}
 ];
 
 @NgModule({

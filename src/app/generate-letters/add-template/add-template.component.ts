@@ -17,7 +17,7 @@ export class AddTemplateComponent implements OnInit {
   templateId!: number;
   fileToUpload: File | null = null;
   filePreviewUrl: string | ArrayBuffer | null = null;
-  fileContent: string | null = null; 
+  fileContent: string | null = null;
 
   constructor(
     private route: ActivatedRoute,
@@ -30,15 +30,11 @@ export class AddTemplateComponent implements OnInit {
 
   handleFileInput(event: any) {
     this.fileToUpload = event.target.files[0];
-
-    // Display preview of the uploaded file
     if (this.fileToUpload) {
       this.previewFile(this.fileToUpload);
     }
   }
 
-
-  // Function to preview the uploaded file
   previewFile(file: File) {
     const reader = new FileReader();
     reader.readAsText(file);
@@ -53,16 +49,18 @@ export class AddTemplateComponent implements OnInit {
       return;
     }
 
-    this.employeesService.uploadTemplate(this.templateName, this.fileToUpload).subscribe(
-      (response: any) => {
-        console.log(response);
-        alert('Template uploaded successfully.');
-        this.idCountUpdated.emit(this.idCount);
-      },
-      (error) => {
-        console.error(error);
-        alert('Error uploading template.');
-      }
-    );
+    this.employeesService
+      .uploadTemplate(this.templateName, this.fileToUpload)
+      .subscribe(
+        (response: any) => {
+          console.log(response);
+          alert('Template uploaded successfully.');
+          this.idCountUpdated.emit(this.idCount);
+        },
+        (error) => {
+          console.error(error);
+          alert('Error uploading template.');
+        }
+      );
   }
 }
