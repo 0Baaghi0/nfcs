@@ -2,10 +2,6 @@
 .main {
   background-color: #ffeaea;
   height: 100%;
-  
- 
-  /* height: auto; */
-  
 }
 #idCount {
   font-size: larger;
@@ -25,8 +21,6 @@
   margin-top: 4vh;
   display: flex;
   flex-wrap: wrap;
-  
-  /* justify-content: space-evenly; */
 }
 img{
   height: 100px;
@@ -50,7 +44,6 @@ img{
   overflow: hidden;
 }
 
-/* Additional styling for employee details */
 .employee-details1,
 .employee-details2 {
   font-size: small;

@@ -31,6 +31,8 @@ export class GenerateLettersComponent {
   addNewTemplate() {
     this.router.navigate(['/addTemplate']);
   }
+
+  
   appoinmentletter() {
     this.displayPdf(1);
   }

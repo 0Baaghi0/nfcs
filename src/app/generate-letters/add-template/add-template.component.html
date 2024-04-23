@@ -8,8 +8,12 @@
   <!-- Display content of the uploaded RTF file -->
   <div *ngIf="fileContent">
     <p>Uploaded File Content:</p>
+
+
     <div class="rtf-view">
       <pre>{{ fileContent }}</pre>
     </div>
+
+    <!-- <editor [init]="editorconfig" class="fileDisplay"></editor> -->
   </div>
 </div>

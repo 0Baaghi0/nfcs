@@ -1,7 +1,8 @@
 <div class="main">
     <app-employee-filter (filterApplied)="applyFilter($event)" (filterRemoved)="removeFilter()" />
+
+
     <div class="employee-list-container">
-        <!-- Conditionally display errorContainer if employee list is empty -->
         <div *ngIf="!employeeExistsChange" id="errorContainer">
             <div class="icon">
                 <span class="material-symbols-outlined">
@@ -10,7 +11,8 @@
             </div>
             <p>No employee found !!</p>
         </div>
-        <!-- Conditionally display employee card display if employee list is not empty -->
+
+        
         <app-employee-card-display *ngIf="employeeExistsChange" [employees]="employees" [employeeCount]="employeeCount" />
     </div>
 </div>

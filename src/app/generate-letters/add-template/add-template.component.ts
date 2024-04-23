@@ -4,6 +4,8 @@ import { GetEmployeesService } from '../../services/get-employees.service';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
+import { ElementRef } from '@angular/core';
+
 
 @Component({
   selector: 'app-add-template',
@@ -19,7 +21,18 @@ export class AddTemplateComponent implements OnInit {
   filePreviewUrl: string | ArrayBuffer | null = null;
   fileContent: string | null = null;
 
+  editorconfig={
+    base_url: "/tinymce",
+    suffix: ".min",
+    plugins:"",
+    menubar: "none",
+    toolbar:"none",
+    setContent:"abc"
+  }
+
+
   constructor(
+    private elementRef: ElementRef,
     private route: ActivatedRoute,
     private employeesService: GetEmployeesService,
     private http: HttpClient,

@@ -56,8 +56,7 @@ export class AppComponent implements OnInit {
       console.log(this.submitted);
       this.router.navigate(['/Home']);
     } else {
-      this.submitted = false;
-      //  console.log(this.login);
+      this.submitted = false
       console.log('Incorrect user details');
     }
   }

@@ -39,7 +39,6 @@ export class ViewEmployeesComponent implements OnInit {
         this.employeeExistsChange = this.employeeCount > 0;
       },
       (error) => {
-        // alert("Empty");
         this.employeeExistsChange = false;
         console.error('Error filtering employees:', error);
       }
