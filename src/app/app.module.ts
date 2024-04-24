@@ -28,6 +28,7 @@ import { ConfirmationSignUpComponent } from './login/confirmation-sign-up/confir
 import { AddTemplateComponent } from './generate-letters/add-template/add-template.component';
 import { ProfileComponent } from './profile/profile.component';
 import { EditorModule, TINYMCE_SCRIPT_SRC } from '@tinymce/tinymce-angular';
+import { EditDetailsComponent } from './view-employees/edit-details/edit-details.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,7 @@ import { EditorModule, TINYMCE_SCRIPT_SRC } from '@tinymce/tinymce-angular';
     VerifySignUpComponent,
     ConfirmationSignUpComponent,
     AddTemplateComponent,
-    ProfileComponent,
+    EditDetailsComponent,
   ],
   imports: [
     BrowserModule,

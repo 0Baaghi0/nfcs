@@ -1,18 +1,18 @@
 .main {
   background-color: #ffeaea;
-  height: 85vh;
+  height: 100%;
 }
 
 .text-heading {
   font-weight: bold;
-  padding-top: 3vh;
+  padding-top: 2vh;
   padding-left: 20vh;
-  padding-bottom: 3vh;
+  padding-bottom: 2vh;
   
 }
 
 .bulk-add {
-  margin-bottom: 6vh;
+  margin-bottom: 10vh;
 }
 /* 
 .single-add {

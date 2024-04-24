@@ -1,8 +1,14 @@
-
 .main {
   background-color: #ffeaea;
   height: 100%;
 }
+
+button.material-icon-button {
+  border: none;
+  background: none;
+  padding: 0;
+}
+
 #idCount {
   font-size: larger;
   font-weight: bolder;
@@ -10,8 +16,8 @@
 }
 .card-container {
   margin: 2vh 4vw;
-  background-color: white; 
-  padding: 30px; 
+  background-color: white;
+  padding: 30px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   padding-bottom: 4vh;
@@ -22,7 +28,7 @@
   display: flex;
   flex-wrap: wrap;
 }
-img{
+img {
   height: 100px;
   width: 100px;
   margin-left: 11px;
@@ -30,7 +36,7 @@ img{
 .img-div {
   margin-top: 2vh;
   height: 35vh;
-  width: 9vw;  
+  width: 9vw;
   border-radius: 50%;
   background-color: white;
   overflow: hidden;
@@ -52,7 +58,7 @@ img{
   background-color: #99d0ff;
   color: black;
   flex-direction: column;
-  justify-content: center; 
+  justify-content: center;
   align-items: center;
 }
 .employee-details2 {
@@ -60,10 +66,36 @@ img{
   height: 14vh;
 }
 
-.material-symbols-outlined
-{
+.material-symbols-outlined {
   position: relative;
   top: 0.8vh;
-  font-size:3vh;
+  font-size: 3vh;
   margin-right: 1vw;
 }
+
+.top-right-circles {
+  position: absolute;
+  display: flex;
+  top: 10px;
+  right: 10px;
+}
+
+.circle1,
+.circle2 {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #c5f4fe;
+  margin-left: 5px;
+}
+
+.employee-card {
+  width: calc(22% - 10px);
+  margin-right: 1.5vw;
+  margin-left: 1.5vw;
+  margin-bottom: 40px;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+}
+

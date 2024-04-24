@@ -1,66 +1,81 @@
 .main {
-  height: auto; /* Adjust height as needed */
-  width: 85vw;
+  width: 90%;
   margin: 0 auto;
-  overflow: hidden;
-  border-radius: 1.5vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-bottom: 6vh;
+  padding: 20px;
 }
 
 .form-heading {
-  display: flex;
-  align-items: center;
   background-color: #99d0ff;
-  height: 8vh;
-  padding-left: 4vw;
-  text-align: left;
-  font-weight: bold;
+  color: #6b106a;
+  font-size: 24px;
+  padding: 10px;
+  text-align: center;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  overflow: hidden;
 }
 
 .form-body {
   background-color: white;
-  text-align: left;
-  padding: 2vh 0;
+  padding: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  overflow: hidden;
 }
 
 .form-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, auto);
-  gap: 0vh; /* Adjust the gap between grid items as needed */
-  place-items: center; /* Center items within their grid cells */
+  display: flex;
+  flex-direction: column;
 }
 
 .form-row {
   display: flex;
-  flex-direction: column;
-  margin-bottom: 2vh; /* Adjust the spacing between rows as needed */
+  flex-wrap: wrap; /* Allow rows to wrap */
+  margin-bottom: 9px;
 }
 
-.form-row label {
-  text-align: left;
-  margin-top: 0vh;
-  margin-bottom: 1vh; /* Adjust the spacing between label and input as needed */
+.form-col {
+  flex: 1;
+  margin-right: 15px;
+  margin-bottom: 9px; /* Add margin between columns */
 }
 
-.form-row input {
-  width: 100%;
+.form-col:last-child {
+  margin-right: 0;
 }
 
-.form-buttons {
-  display: flex;
-  justify-content: flex-end; /* Align buttons to the right */
-  grid-column: 3; /* Place buttons in the third column */
+.form-col label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  background-color: #f4f4f4;
+}
+
+.form-col input,
+.form-col select {
+  width: calc(100% - 10px); /* Adjust width to accommodate margins */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.button-container {
+  margin-top: 20px;
+  text-align: right;
 }
 
 button {
-  background-color: #0c5688;
+  padding: 10px 20px;
+  margin-left: 10px;
+  background-color: #578eb3;
   color: white;
-  border-radius: 5px;
-  padding: 3px 25px;
   border: none;
-  margin-left: 5px; /* Adjust margin between buttons */
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #06568f;
 }

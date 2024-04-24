@@ -1,19 +1,17 @@
 <div class="main">
+  <label for="fileInput">Upload Template:</label>
+  <select [(ngModel)]="templateName1">
+    <option *ngFor="let name of names" [value]="name">{{ name }}</option>
+  </select>
   <label for="templateName">Template Name:</label>
-  <input type="text" id="templateName" [(ngModel)]="templateName">
-
+  <input type="text" id="templateName" [(ngModel)]="templateName2">
+  
   <input type="file" id="fileInput" (change)="handleFileInput($event)">
   <button (click)="uploadTemplate()">Upload Template</button>
 
   <!-- Display content of the uploaded RTF file -->
   <div *ngIf="fileContent">
     <p>Uploaded File Content:</p>
-
-
-    <div class="rtf-view">
-      <pre>{{ fileContent }}</pre>
-    </div>
-
-    <!-- <editor [init]="editorconfig" class="fileDisplay"></editor> -->
+    <div class="fileDisplay" [innerHTML]="fileContent"></div>
   </div>
 </div>

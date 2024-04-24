@@ -27,7 +27,7 @@ export class LandingpageComponent {
         this.employeeExists = this.employees.length > 0;
       },
       (error) => {
-        console.error('Error fetching employee details:', error);
+        console.error('Recheck your input');
         this.employeeExists = false;
       }
     );
@@ -54,7 +54,7 @@ export class LandingpageComponent {
         this.employeeExists = this.employees.length > 0;
       },
       (error) => {
-        alert("Error fetching employee details:")
+        alert("Recheck your input")
         console.error('Error fetching employee details:', error);
         this.employeeExists = false;
       }

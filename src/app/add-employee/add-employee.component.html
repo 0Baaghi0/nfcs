@@ -6,28 +6,59 @@
   <div class="form-body">
     <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()" class="form-container">
       <div class="form-row">
-        <label for="employeeNumber">Employee Number:</label>
-        <input type="number" id="employeeNumber" formControlName="employeeNumber" required>
+        <div class="form-col">
+          <label for="firstName">First Name:</label>
+          <input type="text" id="firstName" formControlName="firstName" required>
+        </div>
+        <div class="form-col">
+          <label for="middleName">Middle Name:</label>
+          <input type="text" id="middleName" formControlName="middleName" required>
+        </div>
+        <div class="form-col">
+          <label for="lastName">Last Name:</label>
+          <input type="text" id="lastName" formControlName="lastName" required>
+        </div>
+        <div class="form-col">
+          <label for="dateOfBirth">Date of Birth:</label>
+          <input type="date" id="dateOfBirth" formControlName="dateOfBirth" required>
+        </div>
       </div>
       <div class="form-row">
-        <label for="firstName">First Name:</label>
-        <input type="text" id="firstName" formControlName="firstName" required>
+        <div class="form-col">
+          <label for="dateOfJoining">Date of Joining:</label>
+          <input type="date" id="dateOfJoining" formControlName="dateOfJoining" required>
+        </div>
+        <div class="form-col">
+          <label for="location">Work Location:</label>
+          <input type="text" id="location" formControlName="location" required>
+        </div>
+        <div class="form-col">
+          <label for="workerType">Worker Type:</label>
+          <select id="workerType" formControlName="workerType" required>
+            <option value="employee">Employee</option>
+            <option value="candidate">Candidate</option>
+          </select>
+        </div>
       </div>
       <div class="form-row">
-        <label for="lastName">Last Name:</label>
-        <input type="text" id="lastName" formControlName="lastName" required>
-      </div>
-      <div class="form-row">
-        <label for="dateOfJoining">Date of Birth:</label>
-        <input type="date" id="dateOfJoining" formControlName="dateOfJoining" required>
-      </div>
-      <div class="form-row">
-        <label for="location">Location:</label>
-        <input type="text" id="location" formControlName="location" required>
-      </div>
-      <div class="form-row">
-        <label for="email">Email:</label>
-        <input type="email" id="email" formControlName="email" required>
+        <div class="form-col">
+          <label for="effectiveStartDate">Effective Start Date:</label>
+          <input type="date" id="effectiveStartDate" formControlName="effectiveStartDate" required>
+        </div>
+        <div class="form-col">
+          <label for="effectiveEndDate">Effective End Date:</label>
+          <input type="date" id="effectiveEndDate" formControlName="effectiveEndDate">
+        </div>
+        <div class="form-col">
+          <label for="email">Email:</label>
+          <input type="email" id="email" formControlName="email" required>
+        </div>
+
+        <div class="form-col">
+          <label for="userid">USER ID:</label>
+          <input type="number" id="userid" formControlName="userid1" required>
+        </div>
+
       </div>
       <div class="button-container">
         <button type="reset">Cancel</button>

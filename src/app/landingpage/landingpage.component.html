@@ -14,39 +14,41 @@
     </button>
   </form> 
 
-  <div *ngIf="!employeeExists" id="errorContainer">
+  <div *ngIf="!employeeExists; else disp" id="errorContainer">
     <div class="icon">
       <span class="material-symbols-outlined">disabled_by_default</span>
     </div>
     <p>No employees found!</p>
   </div>
 
-  <div class="employee-list-display">
-    <table class="employee-table">
-      <thead>
-        <tr class="heading">
-          <th  style="text-align: center;  color: #6b106a;">Emp No</th>
-          <th  style="text-align: center;  color: #6b106a;">Name</th>
-          <th  style="text-align: center;  color: #6b106a;">Date of Birth</th>
-          <th  style="text-align: center;  color: #6b106a;">Email</th>
-        </tr>
-      </thead>
-      <tbody>
-        <ng-container *ngIf="employeeExists; else noEmployees">
-          <tr *ngFor="let employee of employees" class="single-employee">
-            <td  style="text-align: center;">{{ employee.EMPLOYEE_NUMBER }}</td>
-            <td  style="text-align: center;">{{ employee.FIRST_NAME }} {{ employee.LAST_NAME }}</td>
-            <td  style="text-align: center;">{{ employee.DATE_OF_BIRTH | date:'shortDate'}}</td>
-            <td  style="text-align: center;">{{ employee.EMAIL }}</td>
+  <ng-template #disp>
+    <div class="employee-list-display" #disp>
+      <table class="employee-table">
+        <thead>
+          <tr class="heading">
+            <th  style="text-align: center;  color: #6b106a;">Emp No</th>
+            <th  style="text-align: center;  color: #6b106a;">Name</th>
+            <th  style="text-align: center;  color: #6b106a;">Date of Birth</th>
+            <th  style="text-align: center;  color: #6b106a;">Email</th>
           </tr>
-        </ng-container>
-
-        <ng-template #noEmployees>
-          <tr>
-            <td colspan="5" class="no-employees-msg">No employees found</td>
-          </tr>
-        </ng-template>
-      </tbody>
-    </table>
-  </div>
+        </thead>
+        <tbody>
+          <ng-container *ngIf="employeeExists; else noEmployees">
+            <tr *ngFor="let employee of employees" class="single-employee">
+              <td  style="text-align: center;">{{ employee.EMPLOYEE_NO }}</td>
+              <td  style="text-align: center;">{{ employee.FIRST_NAME }} {{ employee.LAST_NAME }}</td>
+              <td  style="text-align: center;">{{ employee.DATE_OF_BIRTH | date:'shortDate'}}</td>
+              <td  style="text-align: center;">{{ employee.EMAIL_ADDRESS }}</td>
+            </tr>
+          </ng-container>
+  
+          <ng-template #noEmployees>
+            <tr>
+              <td colspan="5" class="no-employees-msg">No employees found</td>
+            </tr>
+          </ng-template>
+        </tbody>
+      </table>
+    </div>
+  </ng-template>
 </div>

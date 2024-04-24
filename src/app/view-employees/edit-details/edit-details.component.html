@@ -1,0 +1,75 @@
+<div class="main">
+
+  <div class="container">
+    <h2><u>EDIT DETAILS:</u></h2>
+<br> <br>
+    <form (ngSubmit)="submitForm()">
+      <div class="form-group">
+        <label for="employeeId">Employee ID:</label>
+        <input type="text" [(ngModel)]="employee.EMPLOYEE_NO" id="employeeId" name="employeeId" class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label for="firstName">First Name:</label>
+        <input type="text" [(ngModel)]="employee.FIRST_NAME" id="firstName" name="firstName" class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label for="lastName">Last Name:</label>
+        <input type="text" [(ngModel)]="employee.LAST_NAME" id="lastName" name="lastName" class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address:</label>
+        <input type="email" [(ngModel)]="employee.EMAIL_ADDRESS" id="email" name="email" class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label for="dateOfBirth">Date of Birth:</label>
+        <input type="date" [(ngModel)]="employee.DATE_OF_BIRTH" id="dateOfBirth" name="dateOfBirth"
+          class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label for="dateOfJoining">Date of Joining:</label>
+        <input type="date" id="dateOfJoining" name="dateOfJoining" class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label for="userId">User ID:</label>
+        <input type="text" [(ngModel)]="employee.USER_ID" id="userId" name="userId" class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label for="workLocation">Work Location:</label>
+        <input type="text" [(ngModel)]="employee.WORK_LOCATION" id="workLocation" name="workLocation" class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label for="workerType">Worker Type:</label>
+        <select id="workerType" name="workerType" class="form-control">
+          <option value="employee">Employee</option>
+          <option value="candidate">Candidate</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="effectiveStartDate">Effective Start Date:</label>
+        <input type="date" id="effectiveStartDate" name="effectiveStartDate" class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label for="effectiveEndDate">Effective End Date:</label>
+        <input type="date" id="effectiveEndDate" name="effectiveEndDate" class="form-control">
+      </div>
+
+
+      <h4>Employee?</h4>
+
+
+
+      <button type="submit" class="btn btn-primary">Save Changes</button>
+    </form>
+  </div>
+
+</div>

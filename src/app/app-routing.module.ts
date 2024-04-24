@@ -18,6 +18,7 @@ import { ConfirmationSignUpComponent } from './login/confirmation-sign-up/confir
 import { VerifySignUpComponent } from './login/verify-sign-up/verify-sign-up.component';
 import { AddTemplateComponent} from './generate-letters/add-template/add-template.component'
 import { ProfileComponent } from './profile/profile.component';
+import { EditDetailsComponent } from './view-employees/edit-details/edit-details.component';
 
 
 const routes: Routes = [
@@ -38,7 +39,8 @@ const routes: Routes = [
   { path: 'vsup', component:VerifySignUpComponent},
   { path: 'cnfrmsup', component:ConfirmationSignUpComponent},
   { path: 'addTemplate', component:AddTemplateComponent},
-  { path: 'profile', component:ProfileComponent}
+  { path: 'profile', component:ProfileComponent},
+  { path: 'edit', component:EditDetailsComponent}
 ];
 
 @NgModule({

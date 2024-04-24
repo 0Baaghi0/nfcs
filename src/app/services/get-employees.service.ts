@@ -11,6 +11,8 @@ export class GetEmployeesService {
   private baseUrlInitial = 'http://127.0.0.1:5000/getemployee/filterEmployees';
   private uploadUrl = 'http://127.0.0.1:5000/uploadTemplate';
   private convertRtfUrl = 'http://127.0.0.1:5000/convert_rtf';
+  private updateEmployee = 'http://127.0.0.1:5000/updateid';
+  private fetchTemplateNamesUrl= 'http://127.0.0.1:5000/getTemplateById'
 
   constructor(private http: HttpClient) { }
 
@@ -23,6 +25,10 @@ export class GetEmployeesService {
     return this.http.get<Employee[]>(url);
   }
 
+  updateID(selectedId: number){
+    const url1 = `${this.updateEmployee}/${selectedId}`;
+    return this.http.get<Employee[]>(url1);
+  }
   uploadTemplate(templateName: string, fileToUpload: File): Observable<any> {
     const formData: FormData = new FormData();
     formData.append('TEMPLATE_NAME', templateName);
@@ -33,5 +39,9 @@ export class GetEmployeesService {
   displayPdf(templateId: number): any {
     const apiUrl = `${this.convertRtfUrl}/${templateId}`;
     window.open(apiUrl);
+  }
+
+  fetchTemplateNames(){
+    return this.http.get<any>(this.fetchTemplateNamesUrl);
   }
 }
