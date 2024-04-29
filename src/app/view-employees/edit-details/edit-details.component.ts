@@ -23,7 +23,7 @@ export class EditDetailsComponent implements OnInit {
   }
 
   submitForm() {
-    this.employeeService.updateID(this.employee.EMPLOYEE_NO).subscribe(
+    this.employeeService.updateID(this.employee.EMP_NO).subscribe(
       (response) => {
         alert("Employee details updated successfully");
       },

@@ -35,7 +35,7 @@
         <tbody>
           <ng-container *ngIf="employeeExists; else noEmployees">
             <tr *ngFor="let employee of employees" class="single-employee">
-              <td  style="text-align: center;">{{ employee.EMPLOYEE_NO }}</td>
+              <td  style="text-align: center;">{{ employee.EMP_NO }}</td>
               <td  style="text-align: center;">{{ employee.FIRST_NAME }} {{ employee.LAST_NAME }}</td>
               <td  style="text-align: center;">{{ employee.DATE_OF_BIRTH | date:'shortDate'}}</td>
               <td  style="text-align: center;">{{ employee.EMAIL_ADDRESS }}</td>

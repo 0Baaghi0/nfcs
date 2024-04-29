@@ -6,18 +6,20 @@ import { Employee } from '../employee';
 @Injectable({
   providedIn: 'root'
 })
+
 export class GetEmployeesService {
-  private baseUrl = 'http://127.0.0.1:5000/getemployees';
-  private baseUrlInitial = 'http://127.0.0.1:5000/getemployee/filterEmployees';
+  private baseUrl = 'http://127.0.0.1:5000/getallemployees';  
+  private baseUrlInitial = 'http://127.0.0.1:5000/filterEmployees';
   private uploadUrl = 'http://127.0.0.1:5000/uploadTemplate';
   private convertRtfUrl = 'http://127.0.0.1:5000/convert_rtf';
-  private updateEmployee = 'http://127.0.0.1:5000/updateid';
+  private updateEmployee = 'http://127.0.0.1:5000/editemployee';
   private fetchTemplateNamesUrl= 'http://127.0.0.1:5000/getTemplateById'
 
   constructor(private http: HttpClient) { }
 
   fetchEmployees(): Observable<Employee[]> {
-    return this.http.get<Employee[]>(this.baseUrl);
+    const try1 =  this.baseUrl;
+    return this.http.get<Employee[]>(try1);
   }
 
   filterEmployees(filterInput: string): Observable<Employee[]> {
@@ -25,7 +27,7 @@ export class GetEmployeesService {
     return this.http.get<Employee[]>(url);
   }
 
-  updateID(selectedId: number){
+  updateID(selectedId: string){
     const url1 = `${this.updateEmployee}/${selectedId}`;
     return this.http.get<Employee[]>(url1);
   }

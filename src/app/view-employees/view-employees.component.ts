@@ -24,6 +24,7 @@ export class ViewEmployeesComponent implements OnInit {
         this.employees = data;
         this.employeeCount = this.employees.length;
         this.employeeExistsChange = this.employeeCount > 0;
+        console.log('Employees fetched:', this.employees);
       },
       (error) => {
         console.error('Error fetching employee details:', error);

@@ -49,16 +49,14 @@
   margin-bottom: 5px;
 }
 
-input {
-  background-color: #f4f4f4;
-}
-
-.form-col input,
+.form-col input[type="text"],
+.form-col input[type="date"],
 .form-col select {
   width: calc(100% - 10px); /* Adjust width to accommodate margins */
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 3px;
+  background-color: #f4f4f4;
 }
 
 .button-container {

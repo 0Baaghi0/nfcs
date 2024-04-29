@@ -10,7 +10,8 @@ import { HttpClient } from '@angular/common/http';
 
 export class AddEmployeeComponent implements OnInit {
   employeeForm!: FormGroup;
-  
+  latestEmpNo: string | undefined;
+
   constructor(private fb: FormBuilder, private http: HttpClient) {}
 
   ngOnInit() {
@@ -28,13 +29,27 @@ export class AddEmployeeComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]],
       userid1: ['', Validators.required],
     });
+
+    // Load values into the latestEmpNo variable on page load
+    this.loadLatestEmpNo();
   }
+
+  loadLatestEmpNo() {
+    this.http.get('http://127.0.0.1:5000/latests_emp_no', { responseType: 'text' }).subscribe(
+      (response: string) => {
+        this.latestEmpNo = response;
+      },
+      (error) => {
+        console.error('Error fetching latest employee number', error);
+      }
+    );
+  }
+  
 
   onSubmit() {
     if (this.employeeForm.valid) {
       const employeeData = {
-        // EMP_ID: this.employeeForm.value['employeeNumber'],
-        EMP_ID: 1213,
+        // EMP_ID: 1213,
         EMP_NO: this.employeeForm.value['employeeNumber'],
         FIRST_NAME: this.employeeForm.value['firstName'],
         MIDDLE_NAME: this.employeeForm.value['middleName'],
@@ -45,27 +60,21 @@ export class AddEmployeeComponent implements OnInit {
         WORK_LOCATION: this.employeeForm.value['location'],
         WORKER_TYPE: this.employeeForm.value['workerType'],
         USER_ID: this.employeeForm.value['userid1'],
-        // EFFECTIVE_START_DATE: this.employeeForm.value['effectiveStartDate'],
-        // EFFECTIVE_END_DATE: this.employeeForm.value['effectiveEndDate'],
-        
       };
 
-      this.http.post<any>(`http://127.0.0.1:5000/registeremployee`, employeeData).subscribe(
-        
+      this.http.post<any>('http://127.0.0.1:5000/registeremployee', employeeData).subscribe(
         (response) => {
-          console.log("clicked2")
-          alert('Employee saved successfully');
           console.log('Employee saved successfully', response);
+          alert('Employee saved successfully');
           this.employeeForm.reset();
         },
         (error) => {
-          console.log("clicked3")
-          alert('Data not sent');
           console.error('Error saving employee', error);
+          alert('Data not sent');
         }
       );
+    } else {
+      console.log("Form is invalid");
     }
-    else
-    console.log("clicked error")
   }
 }

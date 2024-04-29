@@ -30,10 +30,10 @@
 
             <div class="employee-details1">
               <div class="img-div"><img src="../../../assets/images/userDP.jpg" alt="userimage"></div> <br>
-              <p>Employee ID: {{ employee.EMPLOYEE_NO }} <br>
+              <p>Employee No: {{ employee.EMP_NO }} <br>
                 Name: {{ employee.FIRST_NAME }} {{ employee.LAST_NAME }}</p>
             </div>
-            <div class="employee-details2">
+            <div class="employee-details2"> 
               <p><br><span class="material-symbols-outlined">
                   calendar_month
                 </span>{{ employee.DATE_OF_BIRTH | date:'shortDate'}}

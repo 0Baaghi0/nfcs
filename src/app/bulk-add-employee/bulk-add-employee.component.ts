@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BulkAddEmployeeComponent implements OnInit{
 
-  bulkAddUrl="http://127.0.0.1:5000/uplodeexcel"
+  bulkAddUrl="http://127.0.0.1:5000/uploadexcel"
 constructor(
 private _http:HttpClient
 ){}
@@ -22,7 +22,7 @@ private _http:HttpClient
 
   uploadFile() {
     let formData = new FormData();
-    formData.append("hllo",this.file);
+    formData.append("Excel",this.file);
 
     this._http.post<any>(this.bulkAddUrl, formData ).subscribe(
       (response)=>{

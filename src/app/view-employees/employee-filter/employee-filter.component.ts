@@ -26,6 +26,8 @@ export class EmployeeFilterComponent {
       (data: Employee[]) => {
         this.employeeExists = data.length > 0;
         this.employeeExistsChange.emit(this.employeeExists);
+        console.log("Here")
+        console.log (data)
       },
       (error) => {
         console.error('Error fetching employee details:', error);

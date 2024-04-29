@@ -9,6 +9,14 @@ h2{
     background-color: white;
     padding-top: 4vh;
     width: 80%;
+    height: 100%;
     padding-left: 50px;
 }
 
+input,
+select{
+    margin-bottom: 30px;
+}
+button{
+    margin-bottom: 50px;
+}
